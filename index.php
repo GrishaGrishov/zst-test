@@ -982,6 +982,12 @@ if (
 
 
     $tekst .=
+        "Hostname: " .
+        gethostname() .
+        PHP_EOL;
+        
+
+    $tekst .=
         "Klasa: " .
         $klasa .
         PHP_EOL;
