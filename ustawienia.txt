@@ -1,0 +1,3 @@
+﻿liczba_pytan=25
+czas_minuty=25
+temat=Informatyka systemy sieciowe qw
