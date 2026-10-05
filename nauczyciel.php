@@ -11,9 +11,13 @@ $hasloNauczyciela = "Nauczyciel123!";
 
 $plikUstawienia = __DIR__ . "/ustawienia.txt";
 
+$folderPytania = __DIR__ . "/pytania";
+
 $folderWyniki = __DIR__ . "/odpowiedzi";
 
 $folderLogo = __DIR__ . "/logo";
+
+$test_ids = getTestIds($folderPytania);
 
 
 // ==================================================
@@ -55,7 +59,9 @@ function wczytajUstawienia($plik)
 
         "czas_minuty" => 30,
 
-        "temat" => "Test",
+        "test_id" => "",
+
+        "temat" => "",
 
         "klasa" => "",
 
@@ -129,6 +135,14 @@ function wczytajUstawienia($plik)
                 );
         }
 
+
+        elseif (
+            $klucz === "test_id"
+        ) {
+
+            $ustawienia["test_id"] =
+                $wartosc;
+        }
 
         elseif (
             $klucz === "temat"
@@ -347,6 +361,94 @@ function znajdzLogo($folder)
 }
 
 
+function getTestIds($folder) {
+        
+    $ids = array();
+    
+    if (!is_dir($folder)) {
+        return null;
+    }
+
+
+    $pliki =
+        scandir(
+            $folder
+        );
+
+
+    if ($pliki === false) {
+        return null;
+    }
+
+
+    foreach ($pliki as $plik) {
+
+        if ($plik === "." ||
+            $plik === "..") {
+            continue;
+        }
+
+
+        $sciezka =
+            $folder .
+            DIRECTORY_SEPARATOR .
+            $plik;
+
+
+        if (!is_dir($sciezka)) {
+            continue;
+        }
+
+        $nazwa =
+            pathinfo(
+                $plik,
+                PATHINFO_FILENAME
+            );
+            
+        $readme = $sciezka .
+                DIRECTORY_SEPARATOR .
+                "readme.txt";
+        
+        
+        $temat = $plik;
+        if (is_file($readme)) {
+            
+            $linie = file(
+                $readme,
+                FILE_IGNORE_NEW_LINES
+            );
+
+            foreach ($linie as $wiersz) {
+
+                $czesci = explode(
+                    ":",
+                    $wiersz,
+                    2
+                );
+
+                if (count($czesci) != 2) {
+                    continue;
+                }
+
+
+                $klucz = trim(
+                    $czesci[0]
+                );
+                
+                
+                if ($klucz == "temat") {
+                    $temat = trim($czesci[1]);
+                }
+            }
+        }
+        $ids[] = array($plik, $temat);
+
+    }
+
+
+    return $ids;
+}
+
 // --------------------------------------------------
 // USUNIĘCIE STAREGO LOGO
 // --------------------------------------------------
@@ -516,7 +618,6 @@ if (
 Panel nauczyciela
 </title>
 
-
 <style>
 
 body {
@@ -591,12 +692,10 @@ button {
 }
 
 </style>
-
 </head>
 
 
 <body>
-
 
 <div class="panel">
 
@@ -696,6 +795,9 @@ $czasMinuty =
     $ustawienia["czas_minuty"];
 
 
+$test_id =
+    $ustawienia["test_id"];
+
 $temat =
     $ustawienia["temat"];
 
@@ -737,6 +839,12 @@ if (
             )
         );
 
+
+    $test_id =
+        trim(
+            $_POST["test_id"]
+            ?? ""
+        );
 
     $temat =
         trim(
@@ -781,6 +889,10 @@ if (
 
         "czas_minuty=" .
         $czasMinuty .
+        PHP_EOL .
+
+        "test_id=" .
+        $test_id .
         PHP_EOL .
 
         "temat=" .
@@ -1097,7 +1209,9 @@ if (
         [
             "Imię",
             "Nazwisko",
+            "Stanowisko",
             "Klasa",
+            "Identyfikator",
             "Temat",
             "Autor",
             "Data",
@@ -1140,16 +1254,22 @@ if (
             $dane["Nazwisko"]
             ?? "";
 
+        $stanowisko =
+            $dane["Stanowisko"]
+            ?? "";
 
         $klasaWyniku =
             $dane["Klasa"]
             ?? $klasa;
 
 
+        $testIdWyniku =
+            $dane["Identyfikator"]
+            ?? "";
+
         $tematWyniku =
             $dane["Temat"]
             ?? "";
-
 
         $autorWyniku =
             $dane["Autor"]
@@ -1195,7 +1315,9 @@ if (
             [
                 $imie,
                 $nazwisko,
+                $stanowisko,
                 $klasaWyniku,
+                $testIdWyniku,
                 $tematWyniku,
                 $autorWyniku,
                 $data,
@@ -1500,6 +1622,28 @@ hr {
 
 </style>
 
+<script>
+    <?php 
+    echo "test_ids = {\n";
+    foreach ($test_ids as $value) {
+        $id = $value[0];
+        $temat = $value[1];
+        echo "    '$id': '$temat',\n";
+    }
+    echo "    }\n";
+    ?>
+    
+    function onChangeId() {
+        id = document.getElementById("test_id").value
+        temat = ""
+        if (id != "") {
+            temat = test_ids[id]
+        }
+        document.getElementById("temat").value = temat
+    }
+
+</script>
+
 </head>
 
 
@@ -1586,7 +1730,39 @@ Ustawienia testu
 
 <label>
 <strong>
-Z czego jest test / temat testu:
+Identyfikator testu:
+</strong>
+</label>
+
+<br>
+
+<select
+    name="test_id"
+    id="test_id"
+    class="input-wide"
+    onchange="onChangeId()"
+    >
+    <option value="">&lt;WYBIERZ TEST&gt;</option>";
+    <?php 
+    foreach ($test_ids as $value) {
+        $id = $value[0];
+        $temat = $value[1];
+        $sel = "";
+        if ($test_id == $id) {
+            $sel = " selected=1";
+        }
+        echo "<option value=$id$sel>$id</option>";
+    }
+    ?>
+</select>
+</p>
+
+
+<p>
+
+<label>
+<strong>
+Temat testu:
 </strong>
 </label>
 
@@ -1595,13 +1771,14 @@ Z czego jest test / temat testu:
 <input
     type="text"
     name="temat"
+    id="temat"
     class="input-wide"
+    placeholder="np. Informatyka - sieci komputerowe"
     value="<?= htmlspecialchars(
         $temat,
         ENT_QUOTES,
         "UTF-8"
     ) ?>"
-    placeholder="np. Informatyka - sieci komputerowe"
     required
 >
 
@@ -2033,7 +2210,15 @@ Nazwisko
 </th>
 
 <th>
+Stanowisko
+</th>
+
+<th>
 Klasa
+</th>
+
+<th>
+Identyfikator
 </th>
 
 <th>
@@ -2117,6 +2302,16 @@ foreach (
 
 </td>
 
+<td>
+
+<?= htmlspecialchars(
+    $dane["Stanowisko"] ?? "",
+    ENT_QUOTES,
+    "UTF-8"
+) ?>
+
+</td>
+
 
 <td>
 
@@ -2130,6 +2325,16 @@ foreach (
 
 </td>
 
+
+<td>
+
+<?= htmlspecialchars(
+    $dane["Identyfikator"] ?? "",
+    ENT_QUOTES,
+    "UTF-8"
+) ?>
+
+</td>
 
 <td>
 
@@ -2346,7 +2551,6 @@ Podgląd wyniku
 
 
 </div>
-
 
 </body>
 

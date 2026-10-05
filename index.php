@@ -7,12 +7,15 @@ session_start();
 // USTAWIENIA ŚCIEŻEK
 // ==================================================
 
-$plikPytania = __DIR__ . "/pytania.txt";
+#$plikPytania = __DIR__ . "/pytania.txt";
 $plikUstawienia = __DIR__ . "/ustawienia.txt";
 
 $folderWyniki = __DIR__ . "/odpowiedzi";
 $folderLogo = __DIR__ . "/logo";
 $folderRysunki = __DIR__ . "/rysunek";
+
+$folderPytania = __DIR__ . "/pytania";
+$plikPytania = "pytania.txt";
 
 
 // ==================================================
@@ -46,6 +49,7 @@ function wczytajUstawienia($plik)
     $ustawienia = [
         "liczba_pytan" => 10,
         "czas_minuty" => 30,
+        "test_id" => "",
         "temat" => "Test",
         "klasa" => "",
         "autor" => ""
@@ -110,6 +114,12 @@ function wczytajUstawienia($plik)
         }
 
 
+        elseif ($klucz == "test_id") {
+
+            $ustawienia["test_id"] =
+                $wartosc;
+        }
+
         elseif ($klucz == "temat") {
 
             $ustawienia["temat"] =
@@ -143,12 +153,10 @@ function wczytajUstawienia($plik)
 function wczytajPytania($plik)
 {
     $pytania = [];
-
-
+    
     if (!file_exists($plik)) {
         return $pytania;
     }
-
 
     $linie = file(
         $plik,
@@ -430,9 +438,7 @@ $ustawienia =
 
 
 $wszystkiePytania =
-    wczytajPytania(
-        $plikPytania
-    );
+    wczytajPytania($folderPytania . "/" . $ustawienia["test_id"] ."/" . $plikPytania);
 
 
 $liczbaPytan =
@@ -443,9 +449,11 @@ $czasMinuty =
     $ustawienia["czas_minuty"];
 
 
+$test_id =
+    $ustawienia["test_id"];
+
 $temat =
     $ustawienia["temat"];
-
 
 $klasaTestu =
     $ustawienia["klasa"];
@@ -609,6 +617,9 @@ if (
         ];
 
 
+        $_SESSION["test_id"] =
+            $test_id;
+
         $_SESSION["temat_testu"] =
             $temat;
 
@@ -727,6 +738,10 @@ if (
     $klasa =
         $_SESSION["uczen"]["klasa"];
 
+
+    $test_id =
+        $_SESSION["test_id"]
+        ?? $test_id;
 
     $tematTestu =
         $_SESSION["temat_testu"]
@@ -982,7 +997,7 @@ if (
 
 
     $tekst .=
-        "Hostname: " .
+        "Stanowisko: " .
         gethostname() .
         PHP_EOL;
         
@@ -992,6 +1007,11 @@ if (
         $klasa .
         PHP_EOL;
 
+
+    $tekst .=
+        "Identyfikator: " .
+        $test_id .
+        PHP_EOL;
 
     $tekst .=
         "Temat: " .
@@ -1154,6 +1174,9 @@ if (
 
         "czas" =>
             $czasUplynal,
+
+        "test_id" =>
+            $test_id,
 
         "temat" =>
             $tematTestu,

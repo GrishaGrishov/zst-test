@@ -1,0 +1,200 @@
+1
+Który z podanych elementów jest urządzeniem wejściowym komputera?
+Monitor
+Klawiatura
+Drukarka
+Głośnik
+Projektor
+b
+2 
+Jakie rozszerzenie ma typowy plik tekstowy?
+jpg
+mp3
+txt
+exe
+png
+c
+3
+Który program służy do tworzenia i edycji dokumentów tekstowych?
+Edytor tekstu
+Odtwarzacz muzyki
+Kalkulator
+Przeglądarka zdjęć
+Program antywirusowy
+a
+4 
+Co oznacza skrót WWW?
+World Wide Web
+World Web Windows
+Wide World Windows
+Web World Work
+Windows Wide Web
+a
+5
+Które z podanych urządzeń służy do przechowywania danych?
+Mysz
+Monitor
+Dysk twardy
+Mikrofon
+Kamera internetowa
+c
+6
+Który z podanych programów jest przeglądarką internetową?
+Mozilla Firefox
+Microsoft Paint
+Notatnik
+Kalkulator
+Eksplorator plików
+a
+7 
+Co jest przykładem bezpiecznego hasła?
+123456
+haslo
+Jan2000
+Qwerty
+M7!kP2#zL9
+e
+8 
+Do czego służy program antywirusowy?
+Do tworzenia prezentacji
+Do ochrony komputera przed złośliwym oprogramowaniem
+Do drukowania dokumentów
+Do odtwarzania filmów
+Do zmiany tapety
+b
+9 
+Która jednostka służy do określania rozmiaru pliku?
+Kilogram
+Metr
+Bajt
+Litr
+Sekunda
+c
+10 
+Co należy zrobić przed odłączeniem pendrive'a od komputera?
+Zrestartować komputer
+Bezpiecznie odłączyć urządzenie
+Wyłączyć monitor
+Otworzyć przeglądarkę
+Zmienić hasło
+b
+11
+Który z podanych elementów jest systemem operacyjnym?
+Windows
+Google Chrome
+Microsoft Word
+Paint
+VLC
+a
+12
+Czym jest folder?
+Programem antywirusowym
+Miejscem służącym do organizowania plików
+Rodzajem wirusa
+Urządzeniem wejściowym
+Rodzajem monitora
+b
+13
+Co oznacza pojęcie „kopie zapasowe”?
+Dodatkowe kopie ważnych danych
+Usuwanie wszystkich plików
+Zmianę nazwy użytkownika
+Instalację gry
+Czyszczenie monitora
+a
+14
+Która czynność pomaga chronić prywatność w internecie?
+Udostępnianie hasła znajomym
+Publikowanie adresu zamieszkania
+Używanie silnych i różnych haseł
+Otwieranie wszystkich otrzymanych załączników
+Podawanie danych osobowych nieznanym osobom
+c
+15 
+Do czego służy arkusz kalkulacyjny?
+Do obliczeń i pracy z tabelami
+Do nagrywania dźwięku
+Do przeglądania stron internetowych
+Do skanowania wirusów
+Do tworzenia kopii zapasowych systemu
+a
+16
+Co oznacza skrót CPU?
+Central Processing Unit
+Computer Personal User
+Central Program Utility
+Computer Processing User
+Control Program Unit
+a
+17
+Który z podanych formatów jest formatem obrazu?
+mp3
+jpg
+docx
+xlsx
+txt
+b
+18 
+Co to jest phishing?
+Metoda tworzenia kopii zapasowych
+Rodzaj drukarki
+Próba wyłudzenia informacji, np. haseł, przez podszywanie się pod zaufaną osobę lub firmę
+Program do edycji zdjęć
+Sposób kompresowania plików
+c
+19
+Który skrót klawiaturowy służy najczęściej do kopiowania zaznaczonego tekstu?
+Ctrl + V
+Ctrl + X
+Ctrl + C
+Ctrl + Z
+Ctrl + A
+c
+20
+Co należy zrobić, gdy otrzymasz podejrzaną wiadomość z linkiem?
+Natychmiast kliknąć link
+Przekazać ją wszystkim znajomym
+Podać nadawcy swoje hasło
+Nie klikać linku i zweryfikować nadawcę
+Pobrać wszystkie załączniki
+d
+21
+Ile wartości może przyjąć jeden bit? 
+1 
+2 
+8 
+16
+256 
+b
+22
+Oprogramowanie typu OEM to:
+bezpłatne oprogramowanie, które można instalować tylko na jednym komputerze
+oprogramowanie rozprowadzane pojedynczo w punktach sprzedaży detalicznej 
+oprogramowanie zainstalowane fabrycznie na nowych komputerach 
+oprogramowanie, które ma ograniczoną ilość uruchomień
+oprogramowanie płatne 
+c
+23
+Ploter to: 
+urządzenie w kształcie grubego flamastra, dołączone do komputera za pomocą kabelka 
+urządzenie do kreślenia rysunków i napisów za pomocą pisaków napełnionych tuszem 
+urządzenie przypominające myszkę z celownikiem i działające tak samo jak ona 
+urządzenie kształtem przypominające drążek sterowy samolotu
+głowica drukująca drukarki 3D 
+b
+24
+BIOS to:
+aplikacja służąca do sporządzania biorytmów
+specjalna wersja programu antywirusowego
+program na płycie głównej służący m.in. do załadowania systemu operacyjnego
+jednostka informacji  
+produkt biodegradowalny
+c
+25
+Wyjustować tekst to znaczy: 
+wyrównać tekst do lewej
+wyrównać tekst do lewej i do prawej
+podzielić tekst na akapity
+napisać wielkimi literami
+wyróżnienie kolorem
+b
