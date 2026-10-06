@@ -2196,10 +2196,14 @@ Eksportuj wyniki do CSV
 <?php if ($pliki): ?>
 
 
-<table>
+<table class="wyniki">
 
 
 <tr>
+
+<th>
+L.p.
+</th>
 
 <th>
 Imię
@@ -2254,6 +2258,8 @@ Akcje
 
 <?php
 
+$counter = 1;
+
 foreach (
     $pliki
     as $plik
@@ -2280,6 +2286,10 @@ foreach (
 
 <tr>
 
+
+<td>
+<?= $counter++ ?>
+</td>
 
 <td>
 

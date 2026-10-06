@@ -12,15 +12,34 @@ $plikUstawienia = __DIR__ . "/ustawienia.txt";
 
 $folderWyniki = __DIR__ . "/odpowiedzi";
 $folderLogo = __DIR__ . "/logo";
-$folderRysunki = __DIR__ . "/rysunek";
+$folderRysunki = "rysunek";
 
-$folderPytania = __DIR__ . "/pytania";
+$folderPytaniaName = "pytania";
+$folderPytania = __DIR__ . "/" . $folderPytaniaName;
 $plikPytania = "pytania.txt";
+
+$plikOpcje = __DIR__ . "/opcje.conf";
 
 
 // ==================================================
 // FUNKCJE
 // ==================================================
+function getComputerName($ip) {
+	$name = $ip;
+	if (is_file($plikOpcje)) {
+		$czesci = explode(".", $name, 4);
+
+		if (count($czesci) == 4) {
+			$c4 = (int)trim($czesci[3]) - 30;
+			$name = "Stacja";
+			if ($c4 < 10) {
+				$name .= "0";
+			}
+			$name .= $c4;
+		}
+	}
+	return $name;
+}
 
 function bezpiecznaNazwa($tekst)
 {
@@ -409,7 +428,6 @@ function znajdzRysunek(
                 PATHINFO_FILENAME
             );
 
-
         if (
             trim(
                 $nazwaBezRozszerzenia
@@ -417,7 +435,7 @@ function znajdzRysunek(
             ===
             $numerPytania
         ) {
-
+			
             return $plik;
         }
     }
@@ -998,7 +1016,7 @@ if (
 
     $tekst .=
         "Stanowisko: " .
-        gethostname() .
+		getComputerName($_SERVER['REMOTE_ADDR']) .
         PHP_EOL;
         
 
@@ -1970,7 +1988,7 @@ elseif (
             $nazwaRysunku =
                 znajdzRysunek(
                     $pytanie["numer"],
-                    $folderRysunki
+					$folderPytania . "/" . $ustawienia["test_id"]
                 );
 
             ?>
@@ -1986,7 +2004,7 @@ elseif (
             <div class="rysunek-pytania">
 
                 <img
-                    src="rysunek/<?= rawurlencode(
+                    src="<?= $folderPytaniaName . "/" . $ustawienia["test_id"] . "/"?><?= rawurlencode(
                         $nazwaRysunku
                     ) ?>"
                     alt="Rysunek do pytania"
