@@ -17,13 +17,36 @@ $folderWyniki = __DIR__ . "/odpowiedzi";
 
 $folderLogo = __DIR__ . "/logo";
 
+$plikOpcje = __DIR__ . "/opcje.conf";
+
+// identyfikatory testow
 $test_ids = getTestIds($folderPytania);
 
+$opcje = null;
+
+if (is_file($plikOpcje)) {
+    $opcje = json_decode(file_get_contents($plikOpcje), true);
+}
 
 // ==================================================
 // FUNKCJE
 // ==================================================
 
+// Zwraca nazwe komputera po numerze ip (wg definicji z opcji)
+function getComputerName($ip) {
+    global $opcje;
+	$name = $ip;
+    if ($opcje != null) {
+        $hostname = $opcje["hostname"] ?? null;
+        if ($hostname != null) {
+            $h = $hostname[$ip] ?? null;
+            if ($h != null) {
+                $name = $h;
+            }
+        }
+    }
+	return $name;
+}
 
 // --------------------------------------------------
 // BEZPIECZNA NAZWA
@@ -1255,7 +1278,7 @@ if (
             ?? "";
 
         $stanowisko =
-            $dane["Stanowisko"]
+            getComputerName($dane["Stanowisko"] ?? "")
             ?? "";
 
         $klasaWyniku =
@@ -2314,8 +2337,7 @@ foreach (
 
 <td>
 
-<?= htmlspecialchars(
-    $dane["Stanowisko"] ?? "",
+<?= htmlspecialchars(getComputerName($dane["Stanowisko"] ?? ""),
     ENT_QUOTES,
     "UTF-8"
 ) ?>

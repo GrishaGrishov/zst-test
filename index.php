@@ -18,28 +18,10 @@ $folderPytaniaName = "pytania";
 $folderPytania = __DIR__ . "/" . $folderPytaniaName;
 $plikPytania = "pytania.txt";
 
-$plikOpcje = __DIR__ . "/opcje.conf";
-
 
 // ==================================================
 // FUNKCJE
 // ==================================================
-function getComputerName($ip) {
-	$name = $ip;
-	if (is_file($plikOpcje)) {
-		$czesci = explode(".", $name, 4);
-
-		if (count($czesci) == 4) {
-			$c4 = (int)trim($czesci[3]) - 30;
-			$name = "Stacja";
-			if ($c4 < 10) {
-				$name .= "0";
-			}
-			$name .= $c4;
-		}
-	}
-	return $name;
-}
 
 function bezpiecznaNazwa($tekst)
 {
@@ -1016,7 +998,7 @@ if (
 
     $tekst .=
         "Stanowisko: " .
-		getComputerName($_SERVER['REMOTE_ADDR']) .
+		$_SERVER['REMOTE_ADDR'] .
         PHP_EOL;
         
 
