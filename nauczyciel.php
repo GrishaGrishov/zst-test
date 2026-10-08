@@ -7,8 +7,6 @@ session_start();
 // USTAWIENIA
 // ==================================================
 
-$hasloNauczyciela = "Nauczyciel123!";
-
 $plikUstawienia = __DIR__ . "/ustawienia.txt";
 
 $folderPytania = __DIR__ . "/pytania";
@@ -24,8 +22,11 @@ $test_ids = getTestIds($folderPytania);
 
 $opcje = null;
 
+$hasloNauczyciela = null;
+
 if (is_file($plikOpcje)) {
     $opcje = json_decode(file_get_contents($plikOpcje), true);
+    $hasloNauczyciela = $opcje["password"] ?? null;
 }
 
 // ==================================================
@@ -1468,6 +1469,15 @@ textarea {
         700px;
 }
 
+.input-mid {
+
+    width:
+        50%;
+
+    max-width:
+        180px;
+}
+
 
 button {
 
@@ -1643,6 +1653,29 @@ hr {
         30px 0;
 }
 
+#zapisz_ustawienia {
+    background-color:#1090ff;
+    color:white;
+    border-radius: 10px;
+    font-size:15pt;
+    margin-right:100px;
+}
+
+.vcenter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+#test_id {
+    height: 40px;
+    font-weight:bold;
+}
+
 </style>
 
 <script>
@@ -1660,7 +1693,7 @@ hr {
         id = document.getElementById("test_id").value
         temat = ""
         if (id != "") {
-            temat = test_ids[id]
+            temat = test_ids[id];
         }
         document.getElementById("temat").value = temat
     }
@@ -1762,22 +1795,26 @@ Identyfikator testu:
 <select
     name="test_id"
     id="test_id"
-    class="input-wide"
     onchange="onChangeId()"
     >
     <option value="">&lt;WYBIERZ TEST&gt;</option>";
     <?php 
+    $tx = "";
     foreach ($test_ids as $value) {
         $id = $value[0];
         $temat = $value[1];
         $sel = "";
         if ($test_id == $id) {
             $sel = " selected=1";
+            $tx = $temat;
         }
         echo "<option value=$id$sel>$id</option>";
     }
     ?>
 </select>
+<script>
+    setTimeout(() => {document.getElementById("temat").value = "<?= $tx ?>";}, 100);
+</script>
 </p>
 
 
@@ -1807,33 +1844,6 @@ Temat testu:
 
 </p>
 
-
-<p>
-
-<label>
-<strong>
-Klasa:
-</strong>
-</label>
-
-<br>
-
-<input
-    type="text"
-    name="klasa"
-    class="input-wide"
-    value="<?= htmlspecialchars(
-        $klasaTestu,
-        ENT_QUOTES,
-        "UTF-8"
-    ) ?>"
-    placeholder="np. 8A"
-    required
->
-
-</p>
-
-
 <p>
 
 <label>
@@ -1859,6 +1869,30 @@ Autor testu:
 
 </p>
 
+<p>
+
+<label>
+<strong>
+Klasa:
+</strong>
+</label>
+
+<br>
+
+<input
+    type="text"
+    name="klasa"
+    class="input-mid"
+    value="<?= htmlspecialchars(
+        $klasaTestu,
+        ENT_QUOTES,
+        "UTF-8"
+    ) ?>"
+    placeholder="np. 8A"
+    required
+>
+
+</p>
 
 <p>
 
@@ -1901,16 +1935,43 @@ Czas testu w minutach:
 
 </p>
 
+<div>
+<span>
+    <button type="submit" name="zapisz_ustawienia" id="zapisz_ustawienia">
+        Zapisz ustawienia
+    </button>
+</span>
 
-<button
-    type="submit"
-    name="zapisz_ustawienia"
->
+<span class="vcenter">
 
-Zapisz ustawienia
-
-</button>
-
+    <span>
+        Link do testu: 
+        <?php
+            $h = $_SERVER['SERVER_ADDR'];
+            $p = $_SERVER['SERVER_PORT'];
+            if ($p != "80") {
+                $h .= ":".$p;
+            }
+            $a = $_SERVER['CONTEXT_PREFIX'];
+            $s = $_SERVER['REQUEST_SCHEME'];
+            $link = $s."://".$h.$a;
+            echo '<a href="'.$link.'" target="blank">'.$link.'</a>';
+        ?> 
+    </span>
+    <span>
+        <?php        
+            echo '<img class="icon" src="copy.png" title="Kopiuj adres" onclick="copy_link(\''.$link.'\')"><br>';
+        ?>
+    </span>
+    <script>
+        function copy_link(link) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(link);
+            }
+        }
+    </script>
+</span>
+</div>
 
 </form>
 
