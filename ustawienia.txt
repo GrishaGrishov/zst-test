@@ -1,6 +1,0 @@
-﻿liczba_pytan=25
-czas_minuty=25
-test_id=inf-1
-temat=Informatyka, poziom podstawowy
-klasa=1a
-autor=RG
