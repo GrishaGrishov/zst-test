@@ -1,6 +1,0 @@
-﻿liczba_pytan=25
-czas_minuty=25
-test_id=grafika-rastrowa-1
-temat=Grafika rastrowa - informatyka, poziom podstawowy
-klasa=1a
-autor=RG
