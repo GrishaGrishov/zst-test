@@ -1950,25 +1950,29 @@ Czas testu w minutach:
             $h = $_SERVER['SERVER_ADDR'];
             $p = $_SERVER['SERVER_PORT'];
             if ($p != "80") {
-                $h .= ":".$p;
+                $h .= ":$p";
             }
             $a = $_SERVER['CONTEXT_PREFIX'];
             $s = $_SERVER['REQUEST_SCHEME'];
-            $link = $s."://".$h.$a;
-            echo '<a href="'.$link.'" target="blank">'.$link.'</a>';
+            $link = "$s://$h$a";
+            echo "<a href=\"$link\" target=\"blank\">{$link}</a>";
         ?> 
     </span>
     <span>
-        <?php        
-            echo '<img class="icon" src="copy.png" title="Kopiuj adres" onclick="copy_link(\''.$link.'\')"><br>';
+        <?php
+            echo '<img class="icon" src="copy.png" title="Kopiuj adres" onclick="copy_link(\'$link\')"><br>';
         ?>
     </span>
     <script>
-        function copy_link(link) {
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(link);
-            }
-        }
+		async function copy_link(link) {
+			try {
+				await navigator.clipboard?.writeText(link);
+				alert("Adres wstawiony do schowka");
+			} catch (err) {
+				alert("Ta funkcja nie działa w tej przeglądarce");
+				console.error("Błąd kopiowania:", err);
+			}
+		}
     </script>
 </span>
 </div>
