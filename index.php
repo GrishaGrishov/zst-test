@@ -18,6 +18,12 @@ $folderPytaniaName = "pytania";
 $folderPytania = __DIR__ . "/" . $folderPytaniaName;
 $plikPytania = "pytania.txt";
 
+$plikOpcje = __DIR__ . "/opcje.conf";
+
+$opcje = null;
+if (is_file($plikOpcje)) {
+    $opcje = json_decode(file_get_contents($plikOpcje), true);
+}
 
 // ==================================================
 // FUNKCJE
@@ -856,6 +862,19 @@ if (
 
     $procent = 0;
 
+	$tabela_ocen = $opcje["grades"];
+	if ($tabela_ocen === null) {
+		$tabela_ocen = [
+			// wg statusu ZST
+			100 => 6,
+			90 => 5,
+			75 => 4,
+			50 => 3,
+			30 => 2,
+			0 => 1
+		];
+
+	}
 
     if (
         $liczbaPytanTestu > 0
@@ -876,34 +895,13 @@ if (
     // OCENA
     // ----------------------------------------------
 
-    if ($procent >= 90) {
-
-        $ocena = 6;
-
-    }
-
-    elseif ($procent >= 75) {
-
-        $ocena = 5;
-
-    }
-
-    elseif ($procent >= 50) {
-
-        $ocena = 4;
-
-    }
-
-    elseif ($procent >= 35) {
-
-        $ocena = 3;
-
-    }
-
-    else {
-
-        $ocena = 1;
-    }
+	$ocena = 1;
+	foreach ($tabela_ocen as $proc => $val) {
+		if ($procent >= $proc) {
+			$ocena = $val;
+			break;
+		}
+	}
 
 
     // ----------------------------------------------

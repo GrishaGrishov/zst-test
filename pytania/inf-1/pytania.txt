@@ -8,14 +8,14 @@ Projektor
 b
 2 
 Jakie rozszerzenie ma typowy plik tekstowy?
-jpg
-mp3
-txt
-exe
-png
+.jpg
+.mp3
+.txt
+.exe
+.png
 c
 3
-Który program służy do tworzenia i edycji dokumentów tekstowych?
+Który program służy do tworzenia i modyfikacji dokumentów tekstowych?
 Edytor tekstu
 Odtwarzacz muzyki
 Kalkulator
@@ -56,10 +56,10 @@ M7!kP2#zL9
 e
 8 
 Do czego służy program antywirusowy?
-Do tworzenia prezentacji
+Do tworzenia prezentacji o zakażeniach wirusowych
 Do ochrony komputera przed złośliwym oprogramowaniem
 Do drukowania dokumentów
-Do odtwarzania filmów
+Do zarządzania programem szczepień
 Do zmiany tapety
 b
 9 
@@ -71,19 +71,19 @@ Litr
 Sekunda
 c
 10 
-Co należy zrobić przed odłączeniem pendrive'a od komputera?
-Zrestartować komputer
-Bezpiecznie odłączyć urządzenie
-Wyłączyć monitor
-Otworzyć przeglądarkę
-Zmienić hasło
+Co należy zrobić przed wyjęciem pendrive'a z komputera?
+Zrestartować komputer ("Uruchom ponownie")
+Bezpiecznie odłączyć urządzenie (przez odpowiedni przycisk w pasku zadań)
+Wyłączyć monitor (lub podłączony projektor)
+Otworzyć przeglądarkę i wejść na stronę producenta pendrive'a.
+Zmienić hasło na silne
 b
 11
 Który z podanych elementów jest systemem operacyjnym?
-Windows
+MS Windows
 Google Chrome
 Microsoft Word
-Paint
+MS Paint
 VLC
 a
 12
@@ -139,8 +139,8 @@ Co to jest phishing?
 Metoda tworzenia kopii zapasowych
 Rodzaj drukarki
 Próba wyłudzenia informacji, np. haseł, przez podszywanie się pod zaufaną osobę lub firmę
-Program do edycji zdjęć
-Sposób kompresowania plików
+Program do edycji zdjęć w grafice rastrowej
+Sposób kompresowania plików o dużym stopniu kompresji
 c
 19
 Który skrót klawiaturowy służy najczęściej do kopiowania zaznaczonego tekstu?
@@ -175,19 +175,19 @@ oprogramowanie, które ma ograniczoną ilość uruchomień
 oprogramowanie płatne 
 c
 23
-Ploter to: 
-urządzenie w kształcie grubego flamastra, dołączone do komputera za pomocą kabelka 
-urządzenie do kreślenia rysunków i napisów za pomocą pisaków napełnionych tuszem 
-urządzenie przypominające myszkę z celownikiem i działające tak samo jak ona 
+HTML to: 
+format zapisu grafiki wektorowej (Highspeed Temporary Media Language) 
+obiektowy język programowania (porównywalny z językiem C++, C#)
+język opisu (hiper)tekstu rozumiany przez przeglądarki (HyperText Meta Language)
 urządzenie kształtem przypominające drążek sterowy samolotu
-głowica drukująca drukarki 3D 
-b
+drukarka termiczna (High Temperature Machine Loader)
+c
 24
 BIOS to:
 aplikacja służąca do sporządzania biorytmów
 specjalna wersja programu antywirusowego
 program na płycie głównej służący m.in. do załadowania systemu operacyjnego
-jednostka informacji  
+jednostka informacji
 produkt biodegradowalny
 c
 25
