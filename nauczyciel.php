@@ -20,10 +20,9 @@ $plikOpcje = __DIR__ . "/opcje.conf";
 // identyfikatory testow
 $test_ids = getTestIds($folderPytania);
 
-$opcje = null;
-
 $hasloNauczyciela = null;
 
+$opcje = null;
 if (is_file($plikOpcje)) {
     $opcje = json_decode(file_get_contents($plikOpcje), true);
     $hasloNauczyciela = $opcje["password"] ?? null;
@@ -88,6 +87,8 @@ function wczytajUstawienia($plik)
         "temat" => "",
 
         "klasa" => "",
+
+        "skala" => "",
 
         "autor" => ""
     ];
@@ -182,6 +183,14 @@ function wczytajUstawienia($plik)
         ) {
 
             $ustawienia["klasa"] =
+                $wartosc;
+        }
+
+        elseif (
+            $klucz === "skala"
+        ) {
+
+            $ustawienia["skala"] =
                 $wartosc;
         }
 
@@ -829,6 +838,9 @@ $temat =
 $klasaTestu =
     $ustawienia["klasa"];
 
+$skalaTestu =
+    $ustawienia["skala"];
+
 
 $autorTestu =
     $ustawienia["autor"];
@@ -883,6 +895,11 @@ if (
             ?? ""
         );
 
+    $skalaTestu =
+        trim(
+            $_POST["skala"]
+            ?? ""
+        );
 
     $autorTestu =
         trim(
@@ -925,6 +942,10 @@ if (
 
         "klasa=" .
         $klasaTestu .
+        PHP_EOL .
+
+        "skala=" .
+        $skalaTestu .
         PHP_EOL .
 
         "autor=" .
@@ -1241,7 +1262,8 @@ if (
             "Data",
             "Punkty",
             "Procent",
-            "Ocena"
+            "Ocena",
+            "Skala"
         ],
         ";"
     );
@@ -1284,6 +1306,10 @@ if (
 
         $klasaWyniku =
             $dane["Klasa"]
+            ?? $klasa;
+
+        $skalaWyniku =
+            $dane["Skala"]
             ?? $klasa;
 
 
@@ -1347,7 +1373,8 @@ if (
                 $data,
                 $punkty,
                 $procent,
-                $ocena
+                $ocena,
+				$skala
             ],
             ";"
         );
@@ -1898,6 +1925,31 @@ Klasa:
 
 <label>
 <strong>
+Skala ocen:
+</strong>
+</label>
+
+<br>
+
+<input
+    type="text"
+    name="skala"
+    class="input-mid"
+    value="<?= htmlspecialchars(
+        $skalaTestu,
+        ENT_QUOTES,
+        "UTF-8"
+    ) ?>"
+    placeholder="np. zst-statut"
+    required
+>
+
+</p>
+
+<p>
+
+<label>
+<strong>
 Liczba pytań dla ucznia:
 </strong>
 </label>
@@ -2338,6 +2390,10 @@ Ocena
 </th>
 
 <th>
+Skala
+</th>
+
+<th>
 Akcje
 </th>
 
@@ -2492,6 +2548,16 @@ foreach (
 
 <?= htmlspecialchars(
     $dane["Ocena"] ?? "",
+    ENT_QUOTES,
+    "UTF-8"
+) ?>
+
+</td>
+
+<td>
+
+<?= htmlspecialchars(
+    $dane["Skala"] ?? "",
     ENT_QUOTES,
     "UTF-8"
 ) ?>

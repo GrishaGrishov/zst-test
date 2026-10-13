@@ -59,7 +59,8 @@ function wczytajUstawienia($plik)
         "test_id" => "",
         "temat" => "Test",
         "klasa" => "",
-        "autor" => ""
+        "autor" => "",
+        "skala" => ""
     ];
 
 
@@ -144,6 +145,12 @@ function wczytajUstawienia($plik)
         elseif ($klucz == "autor") {
 
             $ustawienia["autor"] =
+                $wartosc;
+        }
+
+        elseif ($klucz == "skala") {
+
+            $ustawienia["skala"] =
                 $wartosc;
         }
     }
@@ -464,10 +471,11 @@ $temat =
 $klasaTestu =
     $ustawienia["klasa"];
 
-
 $autorTestu =
     $ustawienia["autor"];
 
+$skalaTestu =
+    $ustawienia["skala"];
 
 // ==================================================
 // SPRAWDZENIE PYTAŃ
@@ -529,15 +537,11 @@ if (
 ) {
 
     $imie =
-        trim(
-            $_POST["imie"] ?? ""
-        );
+        trim(mb_convert_case($_POST["imie"] ?? "", MB_CASE_TITLE, "UTF-8"));
 
 
     $nazwisko =
-        trim(
-            $_POST["nazwisko"] ?? ""
-        );
+		trim(mb_convert_case($_POST["nazwisko"] ?? "", MB_CASE_TITLE, "UTF-8"));
 
 
     // Klasa pochodzi od nauczyciela
@@ -546,6 +550,10 @@ if (
             $klasaTestu
         );
 
+    $skala =
+        trim(
+            $skalaTestu
+        );
 
     if (
         $imie === "" ||
@@ -619,7 +627,10 @@ if (
                 $nazwisko,
 
             "klasa" =>
-                $klasa
+                $klasa,
+
+            "skala" =>
+                $skala
         ];
 
 
@@ -744,6 +755,8 @@ if (
     $klasa =
         $_SESSION["uczen"]["klasa"];
 
+    $skala =
+        $_SESSION["uczen"]["skala"];
 
     $test_id =
         $_SESSION["test_id"]
@@ -862,7 +875,7 @@ if (
 
     $procent = 0;
 
-	$tabela_ocen = $opcje["grades"];
+	$tabela_ocen = $opcje["grades"][$skala];
 	if ($tabela_ocen === null) {
 		$tabela_ocen = [
 			// wg statusu ZST
@@ -1016,6 +1029,10 @@ if (
         $tematTestu .
         PHP_EOL;
 
+    $tekst .=
+        "Skala: " .
+        $skala .
+        PHP_EOL;
 
     $tekst .=
         "Autor: " .
