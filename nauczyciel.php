@@ -20,10 +20,9 @@ $plikOpcje = __DIR__ . "/opcje.conf";
 // identyfikatory testow
 $test_ids = getTestIds($folderPytania);
 
-$opcje = null;
-
 $hasloNauczyciela = null;
 
+$opcje = null;
 if (is_file($plikOpcje)) {
     $opcje = json_decode(file_get_contents($plikOpcje), true);
     $hasloNauczyciela = $opcje["password"] ?? null;
@@ -88,6 +87,8 @@ function wczytajUstawienia($plik)
         "temat" => "",
 
         "klasa" => "",
+
+        "skala" => "",
 
         "autor" => ""
     ];
@@ -182,6 +183,14 @@ function wczytajUstawienia($plik)
         ) {
 
             $ustawienia["klasa"] =
+                $wartosc;
+        }
+
+        elseif (
+            $klucz === "skala"
+        ) {
+
+            $ustawienia["skala"] =
                 $wartosc;
         }
 
@@ -833,6 +842,9 @@ $temat =
 $klasaTestu =
     $ustawienia["klasa"];
 
+$skalaTestu =
+    $ustawienia["skala"];
+
 
 $autorTestu =
     $ustawienia["autor"];
@@ -887,6 +899,11 @@ if (
             ?? ""
         );
 
+    $skalaTestu =
+        trim(
+            $_POST["skala"]
+            ?? ""
+        );
 
     $autorTestu =
         trim(
@@ -929,6 +946,10 @@ if (
 
         "klasa=" .
         $klasaTestu .
+        PHP_EOL .
+
+        "skala=" .
+        $skalaTestu .
         PHP_EOL .
 
         "autor=" .
@@ -1245,7 +1266,8 @@ if (
             "Data",
             "Punkty",
             "Procent",
-            "Ocena"
+            "Ocena",
+            "Skala"
         ],
         ";"
     );
@@ -1288,6 +1310,10 @@ if (
 
         $klasaWyniku =
             $dane["Klasa"]
+            ?? $klasa;
+
+        $skalaWyniku =
+            $dane["Skala"]
             ?? $klasa;
 
 
@@ -1351,7 +1377,8 @@ if (
                 $data,
                 $punkty,
                 $procent,
-                $ocena
+                $ocena,
+				$skala
             ],
             ";"
         );
@@ -1504,6 +1531,7 @@ table {
     margin-top:
         15px;
 }
+
 
 
 th,
@@ -1786,8 +1814,18 @@ Wyloguj
 Ustawienia testu
 </h2>
 
+<script>
+function onSubmit() {
+	v = document.getElementById("skala").selectedIndex;
+	if (v <= 0) {
+		alert("Nie wybrano skali ocen");
+		return false;
+	}
+	return true;
+}
+</script>
 
-<form method="post">
+<form method="post" onSubmit="return onSubmit()">
 
 
 <p>
@@ -1881,6 +1919,9 @@ Autor testu:
 
 </p>
 
+<table>
+<tr>
+<td>
 <p>
 
 <label>
@@ -1903,6 +1944,49 @@ Klasa:
     placeholder="np. 8A"
     required
 >
+
+</p>
+
+<p>
+
+<label>
+<strong>
+Skala ocen:
+</strong>
+</label>
+
+<br>
+
+<select
+    name="skala"
+    id="skala"
+    onchange="onChangeSkala()"
+    >
+    <option value="">&lt;WYBIERZ SKALĘ OCEN&gt;</option>";
+    <?php 
+    foreach ($opcje["grades"] as $key => $val) {
+        $sel = "";
+        if ($skalaTestu == $key) {
+            $sel = " selected=\"1\"";
+        }
+		$tx = "<table><tr><th>Procent</th><th>Ocena</th></tr>";
+		foreach ($val as $k => $v) {
+			$tx .= "<tr><td>$k%</td><td>$v</td></tr>"; 
+		}
+		$tx .= "</table>";
+        echo "<option value=$key data-txt=\"$tx\" $sel>$key</option>";
+    }
+    ?>
+</select>
+<script>
+    //setTimeout(() => {document.getElementById("skala").value = "<?= $tx ?>";}, 100);
+	function onChangeSkala() {
+		const select = document.getElementById("skala");
+		const opcja = select.options[select.selectedIndex];	
+		console.log(opcja.dataset.txt);
+		document.getElementById("skala_txt").innerHTML = opcja.dataset.txt;
+	}
+</script>
 
 </p>
 
@@ -1946,6 +2030,12 @@ Czas testu w minutach:
 >
 
 </p>
+</td>
+<td style="width: 100%;padding-left: 40px">Skala ocen:
+<div id="skala_txt"></div>
+</td>
+</tr>
+</table>
 
 <div>
 <span>
@@ -2350,6 +2440,10 @@ Ocena
 </th>
 
 <th>
+Skala
+</th>
+
+<th>
 Akcje
 </th>
 
@@ -2504,6 +2598,16 @@ foreach (
 
 <?= htmlspecialchars(
     $dane["Ocena"] ?? "",
+    ENT_QUOTES,
+    "UTF-8"
+) ?>
+
+</td>
+
+<td>
+
+<?= htmlspecialchars(
+    $dane["Skala"] ?? "",
     ENT_QUOTES,
     "UTF-8"
 ) ?>
