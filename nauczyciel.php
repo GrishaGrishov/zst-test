@@ -1532,6 +1532,32 @@ table {
         15px;
 }
 
+table.noframes, table.noframes > tbody > tr > td {
+	border: none;
+	padding: 0;
+	vertical-align: top;
+}
+
+table.scale {
+	width: 10ch;
+}
+
+table.scale td {
+	padding:0.5ch 1ch;
+	padding-right: 2ch;
+	text-align: right;
+}
+
+table.scale td {
+	padding:0.5ch 1ch;
+	padding-right: 2ch;
+	text-align: right;
+}
+
+table.scale td:nth-child(2) {
+	padding-left: 3ch;
+	text-align: left;
+}
 
 
 th,
@@ -1708,6 +1734,29 @@ hr {
     font-weight:bold;
 }
 
+#skala {
+    height: 40px;
+}
+
+.error {
+	color: #b01010;
+	font-style: italic;
+}
+
+.wiersz {
+    display: flex;
+    gap: 10px;
+}
+
+.wiersz div {
+    flex: 0 0 auto;
+}
+
+.wiersz div:nth-child(2) {
+	flex: 1;
+	min-width: 0;
+}
+
 </style>
 
 <script>
@@ -1827,7 +1876,8 @@ function onSubmit() {
 
 <form method="post" onSubmit="return onSubmit()">
 
-
+<div class="wiersz input-wide">
+<div>
 <p>
 
 <label>
@@ -1865,6 +1915,34 @@ Identyfikator testu:
     setTimeout(() => {document.getElementById("autor").value = "<?= $ax ?>";}, 100);
 </script>
 </p>
+</div>
+<div>
+<p>
+
+<label>
+<strong>
+Autor testu:
+</strong>
+</label>
+
+<br>
+
+<input
+    type="text"
+    name="autor"
+    class="input-wide"
+    value="<?= htmlspecialchars(
+        $autorTestu,
+        ENT_QUOTES,
+        "UTF-8"
+    ) ?>"
+    placeholder="np. Jan Kowalski"
+    required
+>
+
+</p>
+</div>
+</div>
 
 
 <p>
@@ -1893,6 +1971,7 @@ Temat testu:
 
 </p>
 
+<<<<<<< HEAD
 <p>
 
 <label>
@@ -1922,6 +2001,10 @@ Autor testu:
 <table>
 <tr>
 <td>
+=======
+<div class="wiersz">
+<div>
+>>>>>>> 01da46b6f8e090f827391476f227490ed5660a1a
 <p>
 
 <label>
@@ -1947,48 +2030,6 @@ Klasa:
 
 </p>
 
-<p>
-
-<label>
-<strong>
-Skala ocen:
-</strong>
-</label>
-
-<br>
-
-<select
-    name="skala"
-    id="skala"
-    onchange="onChangeSkala()"
-    >
-    <option value="">&lt;WYBIERZ SKALĘ OCEN&gt;</option>";
-    <?php 
-    foreach ($opcje["grades"] as $key => $val) {
-        $sel = "";
-        if ($skalaTestu == $key) {
-            $sel = " selected=\"1\"";
-        }
-		$tx = "<table><tr><th>Procent</th><th>Ocena</th></tr>";
-		foreach ($val as $k => $v) {
-			$tx .= "<tr><td>$k%</td><td>$v</td></tr>"; 
-		}
-		$tx .= "</table>";
-        echo "<option value=$key data-txt=\"$tx\" $sel>$key</option>";
-    }
-    ?>
-</select>
-<script>
-    //setTimeout(() => {document.getElementById("skala").value = "<?= $tx ?>";}, 100);
-	function onChangeSkala() {
-		const select = document.getElementById("skala");
-		const opcja = select.options[select.selectedIndex];	
-		console.log(opcja.dataset.txt);
-		document.getElementById("skala_txt").innerHTML = opcja.dataset.txt;
-	}
-</script>
-
-</p>
 
 <p>
 
@@ -2030,14 +2071,62 @@ Czas testu w minutach:
 >
 
 </p>
-</td>
-<td style="width: 100%;padding-left: 40px">Skala ocen:
-<div id="skala_txt"></div>
-</td>
-</tr>
-</table>
-
+</div>
 <div>
+
+<label>
+<strong>
+Skala ocen:
+</strong>
+</label>
+
+<br>
+
+<select
+    name="skala"
+    id="skala"
+    onchange="onChangeSkala()"
+    >
+    <option value="">&lt;WYBIERZ SKALĘ OCEN&gt;</option>";
+    <?php 
+    foreach ($opcje["grades"] as $key => $val) {
+        $sel = "";
+        if ($skalaTestu == $key) {
+            $sel = " selected=\"1\"";
+        }
+		$tx = "<table class='scale'><tr><th>Procent</th><th>Ocena</th></tr>";
+		foreach ($val as $k => $v) {
+			$tx .= "<tr><td>$k%</td><td>$v</td></tr>"; 
+		}
+		$tx .= "</table>";
+        echo "<option value=$key data-txt=\"$tx\" $sel>$key</option>";
+    }
+    ?>
+</select>
+<script>
+    setTimeout(() => {onChangeSkala();}, 100);
+	function onChangeSkala() {
+		const select = document.getElementById("skala");
+		const opcja = select.options[select.selectedIndex];	
+		txt = opcja.dataset.txt;
+		if (txt === undefined) {
+			txt = "<span class='error'>Nie określono skali ocen</span>";
+		}
+		
+		document.getElementById("skala_txt").innerHTML = txt;
+	}
+</script>
+
+</p>
+
+<p>Skala ocen:</p>
+<div id="skala_txt"></div>
+<p>
+
+
+</div>
+
+</div>
 <span>
     <button type="submit" name="zapisz_ustawienia" id="zapisz_ustawienia">
         Zapisz ustawienia
