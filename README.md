@@ -13,11 +13,15 @@ Alias /zst-test "C:/Users/xxxx/Documents/myapp/zst-test"
 == TODO ==
 
 - odpowiedzi wielokrotne (checkboxy zamiast radiobuttonów)
-- Wymaganie potwierdzenia zakończenia, gdy nie wypełnione wszystkie odpowiedzi
-- wybór skali ocen i wyświetlenie skali u nauczyciela
+- wymaganie potwierdzenia zakończenia, gdy nie wypełnione wszystkie odpowiedzi
 - wyświetlenie skali ocen u ucznia
-- sortowanie wyników z ignorowaniem wielkości znaków (lub zamiana znaków np. u ucznia)
 - zmniejszenie ilości informacji w wierszach tabelki (tylko na stronie, w csv tak jak było)
 	id, temat, autor nad tabelką
 - zwijanie informacji o klasach
+- podział wyników na klasy, tematy
+- sortowanie także wg daty/czasu
+
+== DONE ==
+- sortowanie wyników z ignorowaniem wielkości znaków (lub zamiana znaków np. u ucznia)
+- wybór skali ocen i wyświetlenie skali u nauczyciela
 
