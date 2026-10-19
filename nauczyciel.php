@@ -444,6 +444,7 @@ function getTestIds($folder) {
         
         
         $temat = $plik;
+        $autor = "";
         if (is_file($readme)) {
             
             $linie = file(
@@ -472,9 +473,12 @@ function getTestIds($folder) {
                 if ($klucz == "temat") {
                     $temat = trim($czesci[1]);
                 }
+                elseif ($klucz == "autor") {
+                    $autor = trim($czesci[1]);
+                }
             }
         }
-        $ids[] = array($plik, $temat);
+        $ids[] = array($plik, $temat, $autor);
 
     }
 
@@ -1761,7 +1765,8 @@ hr {
     foreach ($test_ids as $value) {
         $id = $value[0];
         $temat = $value[1];
-        echo "    '$id': '$temat',\n";
+        $autor = $value[2];
+        echo "    '$id': ['$temat', '$autor'],\n";
     }
     echo "    }\n";
     ?>
@@ -1769,10 +1774,13 @@ hr {
     function onChangeId() {
         id = document.getElementById("test_id").value
         temat = ""
+        autor = ""
         if (id != "") {
-            temat = test_ids[id];
+            temat = test_ids[id][0];
+            autor = test_ids[id][1];
         }
         document.getElementById("temat").value = temat
+        document.getElementById("autor").value = autor
     }
 
 </script>
@@ -1891,17 +1899,20 @@ Identyfikator testu:
     foreach ($test_ids as $value) {
         $id = $value[0];
         $temat = $value[1];
+        $autor = $value[2];
         $sel = "";
         if ($test_id == $id) {
             $sel = " selected=1";
             $tx = $temat;
+            $ax = $autor;
         }
-        echo "<option value=$id$sel>$id</option>";
+        echo "<option value=\"$id\"$sel>$id</option>\r\n";
     }
     ?>
 </select>
 <script>
     setTimeout(() => {document.getElementById("temat").value = "<?= $tx ?>";}, 100);
+    setTimeout(() => {document.getElementById("autor").value = "<?= $ax ?>";}, 100);
 </script>
 </p>
 </div>
@@ -1960,8 +1971,40 @@ Temat testu:
 
 </p>
 
+<<<<<<< HEAD
+<p>
+
+<label>
+<strong>
+Autor testu:
+</strong>
+</label>
+
+<br>
+
+<input
+    type="text"
+    name="autor"
+    id="autor"
+    class="input-wide"
+    value="<?= htmlspecialchars(
+        $autorTestu,
+        ENT_QUOTES,
+        "UTF-8"
+    ) ?>"
+    placeholder="np. Jan Kowalski"
+    required
+>
+
+</p>
+
+<table>
+<tr>
+<td>
+=======
 <div class="wiersz">
 <div>
+>>>>>>> 01da46b6f8e090f827391476f227490ed5660a1a
 <p>
 
 <label>
