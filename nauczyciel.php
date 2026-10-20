@@ -1971,40 +1971,8 @@ Temat testu:
 
 </p>
 
-<<<<<<< HEAD
-<p>
-
-<label>
-<strong>
-Autor testu:
-</strong>
-</label>
-
-<br>
-
-<input
-    type="text"
-    name="autor"
-    id="autor"
-    class="input-wide"
-    value="<?= htmlspecialchars(
-        $autorTestu,
-        ENT_QUOTES,
-        "UTF-8"
-    ) ?>"
-    placeholder="np. Jan Kowalski"
-    required
->
-
-</p>
-
-<table>
-<tr>
-<td>
-=======
 <div class="wiersz">
 <div>
->>>>>>> 01da46b6f8e090f827391476f227490ed5660a1a
 <p>
 
 <label>
