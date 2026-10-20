@@ -1314,7 +1314,7 @@ if (
 
         $skalaWyniku =
             $dane["Skala"]
-            ?? $klasa;
+            ?? "";
 
 
         $testIdWyniku =
@@ -1378,7 +1378,7 @@ if (
                 $punkty,
                 $procent,
                 $ocena,
-				$skala
+				$skalaWyniku
             ],
             ";"
         );
