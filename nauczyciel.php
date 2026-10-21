@@ -1438,326 +1438,9 @@ if (
 Panel nauczyciela
 </title>
 
+<link rel="stylesheet" href="css/style.css">
+<script src="js/nauczyciel.js"></script>
 
-<style>
-
-body {
-
-    font-family:
-        Arial,
-        sans-serif;
-
-    background:
-        #f2f2f2;
-
-    margin:
-        0;
-
-    padding:
-        20px;
-}
-
-
-.container {
-
-    max-width:
-        1200px;
-
-    margin:
-        auto;
-
-    background:
-        white;
-
-    padding:
-        30px;
-
-    border-radius:
-        10px;
-
-    box-sizing:
-        border-box;
-}
-
-
-input,
-textarea {
-
-    padding:
-        10px;
-
-    box-sizing:
-        border-box;
-}
-
-
-.input-wide {
-
-    width:
-        100%;
-
-    max-width:
-        700px;
-}
-
-.input-mid {
-
-    width:
-        50%;
-
-    max-width:
-        180px;
-}
-
-
-button {
-
-    padding:
-        10px 15px;
-
-    cursor:
-        pointer;
-}
-
-
-table {
-
-    width:
-        100%;
-
-    border-collapse:
-        collapse;
-
-    margin-top:
-        15px;
-}
-
-table.noframes, table.noframes > tbody > tr > td {
-	border: none;
-	padding: 0;
-	vertical-align: top;
-}
-
-table.scale {
-	width: 10ch;
-}
-
-table.scale td {
-	padding:0.5ch 1ch;
-	padding-right: 2ch;
-	text-align: right;
-}
-
-table.scale td {
-	padding:0.5ch 1ch;
-	padding-right: 2ch;
-	text-align: right;
-}
-
-table.scale td:nth-child(2) {
-	padding-left: 3ch;
-	text-align: left;
-}
-
-
-th,
-td {
-
-    border:
-        1px solid #ccc;
-
-    padding:
-        8px;
-
-    text-align:
-        left;
-}
-
-
-th {
-
-    background:
-        #eeeeee;
-}
-
-
-.klasa {
-
-    margin-top:
-        30px;
-
-    border:
-        1px solid #ccc;
-
-    padding:
-        20px;
-
-    border-radius:
-        8px;
-
-    overflow-x:
-        auto;
-}
-
-
-.logo-panel {
-
-    margin:
-        20px 0;
-
-    padding:
-        20px;
-
-    background:
-        #f7f7f7;
-
-    border-radius:
-        8px;
-}
-
-
-.logo-panel img {
-
-    max-width:
-        300px;
-
-    max-height:
-        180px;
-
-    width:
-        auto;
-
-    height:
-        auto;
-
-    display:
-        block;
-
-    margin-bottom:
-        15px;
-
-    object-fit:
-        contain;
-}
-
-
-.info {
-
-    background:
-        #e8f5e9;
-
-    padding:
-        12px;
-
-    margin:
-        15px 0;
-
-    border-radius:
-        6px;
-}
-
-
-.blad {
-
-    background:
-        #ffebee;
-
-    color:
-        #b00020;
-
-    padding:
-        12px;
-
-    margin:
-        15px 0;
-
-    border-radius:
-        6px;
-}
-
-
-.podglad {
-
-    background:
-        #f5f5f5;
-
-    padding:
-        20px;
-
-    border:
-        1px solid #ccc;
-
-    border-radius:
-        8px;
-
-    white-space:
-        pre-wrap;
-
-    overflow:
-        auto;
-}
-
-
-a {
-
-    text-decoration:
-        none;
-}
-
-
-hr {
-
-    margin:
-        30px 0;
-}
-
-#zapisz_ustawienia {
-    background-color:#1090ff;
-    color:white;
-    border-radius: 10px;
-    font-size:15pt;
-    margin-right:100px;
-}
-
-.vcenter {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.icon {
-    cursor: pointer;
-}
-
-#test_id {
-    height: 40px;
-    font-weight:bold;
-}
-
-#skala {
-    height: 40px;
-}
-
-.error {
-	color: #b01010;
-	font-style: italic;
-}
-
-.wiersz {
-    display: flex;
-    gap: 10px;
-}
-
-.wiersz div {
-    flex: 0 0 auto;
-}
-
-.wiersz div:nth-child(2) {
-	flex: 1;
-	min-width: 0;
-}
-
-</style>
 
 <script>
     <?php 
@@ -1854,7 +1537,30 @@ Wyloguj
 
 <?php endif; ?>
 
+ <div class="przyciski">
+        <button class="aktywna"
+                data-zakladka="test">
+            test
+        </button>
 
+        <button 
+                data-zakladka="ustawienia">
+            Ustawienia
+        </button>
+
+        <button data-zakladka="wyniki">
+            Wyniki
+        </button>
+
+        <button data-zakladka="analiza">
+            Analiza
+        </button>
+    </div>
+
+<div id="test" class="zawartosc">
+To jest test
+</div>
+<div id="ustawienia" class="zawartosc">
 <!-- ==================================================
      USTAWIENIA TESTU
      ================================================== -->
@@ -1973,129 +1679,126 @@ Temat testu:
 </p>
 
 <div class="wiersz">
-<div>
-<p>
+	<div>
+		<p>
 
-<label>
-<strong>
-Klasa:
-</strong>
-</label>
+		<label>
+		<strong>
+		Klasa:
+		</strong>
+		</label>
 
-<br>
+		<br>
 
-<input
-    type="text"
-    name="klasa"
-    class="input-mid"
-    value="<?= htmlspecialchars(
-        $klasaTestu,
-        ENT_QUOTES,
-        "UTF-8"
-    ) ?>"
-    placeholder="np. 8A"
-    required
->
+		<input
+			type="text"
+			name="klasa"
+			class="input-mid"
+			value="<?= htmlspecialchars(
+				$klasaTestu,
+				ENT_QUOTES,
+				"UTF-8"
+			) ?>"
+			placeholder="np. 8A"
+			required
+		>
 
-</p>
-
-
-<p>
-
-<label>
-<strong>
-Liczba pytań dla ucznia:
-</strong>
-</label>
-
-<br>
-
-<input
-    type="number"
-    name="liczba_pytan"
-    value="<?= $liczbaPytan ?>"
-    min="1"
-    required
->
-
-</p>
+		</p>
 
 
-<p>
+		<p>
 
-<label>
-<strong>
-Czas testu w minutach:
-</strong>
-</label>
+		<label>
+		<strong>
+		Liczba pytań dla ucznia:
+		</strong>
+		</label>
 
-<br>
+		<br>
 
-<input
-    type="number"
-    name="czas_minuty"
-    value="<?= $czasMinuty ?>"
-    min="1"
-    required
->
+		<input
+			type="number"
+			name="liczba_pytan"
+			value="<?= $liczbaPytan ?>"
+			min="1"
+			required
+		>
 
-</p>
-</div>
-<div>
+		</p>
 
-<label>
-<strong>
-Skala ocen:
-</strong>
-</label>
 
-<br>
+		<p>
 
-<select
-    name="skala"
-    id="skala"
-    onchange="onChangeSkala()"
-    >
-    <option value="">&lt;WYBIERZ SKALĘ OCEN&gt;</option>";
-    <?php 
-    foreach ($opcje["grades"] as $key => $val) {
-        $sel = "";
-        if ($skalaTestu == $key) {
-            $sel = " selected=\"1\"";
-        }
-		$tx = "<table class='scale'><tr><th>Procent</th><th>Ocena</th></tr>";
-		foreach ($val as $k => $v) {
-			$tx .= "<tr><td>$k%</td><td>$v</td></tr>"; 
+		<label>
+		<strong>
+		Czas testu w minutach:
+		</strong>
+		</label>
+
+		<br>
+
+		<input
+			type="number"
+			name="czas_minuty"
+			value="<?= $czasMinuty ?>"
+			min="1"
+			required
+		>
+
+		</p>
+	</div>
+
+	<div>
+	<label><strong>Skala ocen:</strong></label>
+
+	<br>
+
+	<select
+		name="skala"
+		id="skala"
+		onchange="onChangeSkala()"
+		>
+		<option value="">&lt;WYBIERZ SKALĘ OCEN&gt;</option>";
+		<?php 
+		foreach ($opcje["grades"] as $key => $val) {
+			$sel = "";
+			if ($skalaTestu == $key) {
+				$sel = " selected=\"1\"";
+			}
+			$tx = "<table class='scale'><tr><th>Procent</th><th>Ocena</th></tr>";
+			foreach ($val as $k => $v) {
+				$tx .= "<tr><td>$k%</td><td>$v</td></tr>"; 
+			}
+			$tx .= "</table>";
+			echo "<option value=$key data-txt=\"$tx\" $sel>$key</option>";
 		}
-		$tx .= "</table>";
-        echo "<option value=$key data-txt=\"$tx\" $sel>$key</option>";
-    }
-    ?>
-</select>
-<script>
-    setTimeout(() => {onChangeSkala();}, 100);
-	function onChangeSkala() {
-		const select = document.getElementById("skala");
-		const opcja = select.options[select.selectedIndex];	
-		txt = opcja.dataset.txt;
-		if (txt === undefined) {
-			txt = "<span class='error'>Nie określono skali ocen</span>";
+		?>
+	</select>
+	<script>
+		setTimeout(() => {onChangeSkala();}, 100);
+		function onChangeSkala() {
+			const select = document.getElementById("skala");
+			const opcja = select.options[select.selectedIndex];	
+			txt = opcja.dataset.txt;
+			if (txt === undefined) {
+				txt = "<span class='error'>Nie określono skali ocen</span>";
+			}
+			
+			document.getElementById("skala_txt").innerHTML = txt;
 		}
-		
-		document.getElementById("skala_txt").innerHTML = txt;
-	}
-</script>
+	</script>
 
-</p>
+	</p>
 
-<p>Skala ocen:</p>
-<div id="skala_txt"></div>
-<p>
+	<p>Skala ocen:</p>
+	<div id="skala_txt"></div>
+	<p>
 
 
-</div>
+	</div>
 
-</div>
+</div> <!-- class="wiersz" -->
+
 <span>
     <button type="submit" name="zapisz_ustawienia" id="zapisz_ustawienia">
         Zapisz ustawienia
@@ -2259,6 +1962,9 @@ Wgraj logo
 
 <hr>
 
+</div>
+
+<div id="wyniki" class="zawartosc">
 
 <!-- ==================================================
      WYNIKI
@@ -2746,6 +2452,8 @@ Brak zapisanych wyników dla tej klasy.
 
 ?>
 
+</div>
+<div id="analiza" class="zawartosc"></div>
 
 <!-- ==================================================
      PODGLĄD WYNIKU
@@ -2820,8 +2528,43 @@ Podgląd wyniku
 
 ?>
 
+</div>
 
 </div>
+
+<script>
+    const przyciski =
+        document.querySelectorAll(
+            ".przyciski button"
+        );
+
+    const zawartosci =
+        document.querySelectorAll(
+            ".zawartosc"
+        );
+
+    przyciski.forEach(przycisk => {
+        przycisk.addEventListener("click", () => {
+
+            // Wyłącz wszystkie zakładki
+            przyciski.forEach(p =>
+                p.classList.remove("aktywna")
+            );
+
+            zawartosci.forEach(z =>
+                z.classList.remove("aktywna")
+            );
+
+            // Aktywuj wybraną zakładkę
+            przycisk.classList.add("aktywna");
+
+            document.getElementById(
+                przycisk.dataset.zakladka
+            ).classList.add("aktywna");
+        });
+    });
+</script>
+
 
 </body>
 
