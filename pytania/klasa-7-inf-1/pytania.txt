@@ -1,0 +1,199 @@
+1
+Który z podanych elementów jest urządzeniem wejściowym (czyli wprowadzającym dane) komputera?
+Monitor
+Klawiatura
+Drukarka
+Głośnik
+Projektor
+b
+2 
+Jakie rozszerzenie ma typowy plik tekstowy?
+.jpg
+.mp3
+.txt
+.exe
+.png
+c
+3
+Który program służy do tworzenia i modyfikacji dokumentów tekstowych?
+Edytor tekstu (np. MS Word, LibreOffice Writer, Notatnik)
+Odtwarzacz muzyki (np. WinAmp, AIMP)
+Kalkulator
+Przeglądarka zdjęć (np. Google Gallery)
+Program antywirusowy (np. Avast, Kaspersky Antivirus)
+a
+4 
+Co oznacza skrót WWW?
+World Wide Web
+Nic nie znaczy, to przypadkowe litery
+Wonderful Windows Workshop
+Wiem, Widzę, Wchodzę
+Whirlpool Washing Wookie
+a
+5
+Które z podanych urządzeń służy do przechowywania danych?
+Mysz
+Monitor
+Dysk twardy
+Mikrofon
+Kamera internetowa
+c
+6
+Który z podanych programów jest przeglądarką internetową?
+Mozilla Firefox
+Microsoft Paint
+Notatnik
+Kalkulator
+Eksplorator plików
+a
+7 
+Co jest przykładem bezpiecznego hasła?
+123456
+haslo
+Jan2000
+Qwerty
+M7!kP2#zL9
+e
+8 
+Do czego służy program antywirusowy?
+Do tworzenia prezentacji o zakażeniach wirusowych
+Do ochrony komputera przed złośliwym oprogramowaniem
+Do drukowania dokumentów
+Do zarządzania programem szczepień
+Do zmiany tapety
+b
+9 
+Która jednostka służy do określania rozmiaru pliku?
+Kilogram
+Metr
+Bajt
+Litr
+Sekunda
+c
+10 
+Jakie programy służą do edycji plików graficznych?
+LibreOffice Writer, Notatnik
+Paint, GIMP
+Inkscape, Scratch
+Mozilla Firefox
+b
+11
+Który z podanych elementów jest systemem operacyjnym?
+MS Windows
+Google Chrome
+Microsoft Word
+MS Paint
+ChatGPT
+a
+12
+Czym jest folder?
+Programem antywirusowym
+Miejscem służącym do trzymania i organizowania plików
+Rodzajem wirusa
+Urządzeniem wejściowym
+Rodzajem monitora
+b
+13
+Co oznacza pojęcie „piksel”?
+To samo co "kapsel"
+To samo co "bit"
+Najmniejszy element (punkt) obrazu rastrowego
+Rodzaj koloru z palety RGB
+Biały lub czarny kolor
+a
+14
+Jakie są różnice pomiędzy GIMPem a Paintem?
+Żadne, oba programy mają identyczne funkcje
+GIMP jest do edycji obrazów 3D 
+GIMP pozwala na pracę z warstwami i ma bogatszy zestaw narzędzi
+Paint jest znacznie bardziej rozbudowany
+Paint jest darmowy a GIMP kosztuje 350 zł
+c
+15 
+Które z wymienionych operacji należą do edycji grafiki?
+Wyrównywanie do prawego marginesu
+Kadrowanie, zmiana nasycenia kolorów, wyostrzanie
+Wyliczanie wartości liczbowych
+Odczyt zawartości folderu
+Zapisywanie dokumentu tekstowego
+a
+16
+Które z wymienionych są elementami składowymi komputera?
+karta upominkowa, kabel, wskaźnik laserowy
+wtyczka RJ, światłowód, router
+zasilacz, żarówka, switch
+karta muzyczna, pamięć ROM, czytnik płyt CD
+karta graficzna, telewizor, licznik kroków
+a
+17
+Który z podanych formatów jest formatem obrazu?
+mp3
+jpg
+docx
+xlsx
+txt
+b
+18 
+Co możemy uzyskać stosując warstwy w edytorze grafiki?
+Automatyczne rysowanie kształtów geometrycznych
+Szybkie zapisywanie grafiki
+Przenikanie (półprzezroczystość) obiektów, tworzenie fotomontaży
+Warstwy w niczym nie pomagają
+Kompresowanie plików (zip)
+c
+19
+Który skrót klawiaturowy służy najczęściej do kopiowania zaznaczonego tekstu?
+Ctrl + V
+Ctrl + X
+Ctrl + C
+Ctrl + Z
+Ctrl + A
+c
+20
+Co należy zrobić, gdy otrzymasz podejrzaną wiadomość z linkiem?
+Natychmiast kliknąć link
+Przekazać ją wszystkim znajomym
+Podać nadawcy swoje hasło
+Nie klikać linku i zweryfikować nadawcę
+Pobrać wszystkie załączniki
+d
+21
+----------- Ile różnych wartości może przyjąć jeden bit? 
+1 
+2 
+8 
+16
+256 
+b
+22
+-------------- Oprogramowanie typu OEM to:
+bezpłatne oprogramowanie, które można instalować tylko na jednym komputerze
+oprogramowanie rozprowadzane pojedynczo w punktach sprzedaży detalicznej 
+oprogramowanie zainstalowane fabrycznie na nowych komputerach 
+oprogramowanie, które ma ograniczoną ilość uruchomień
+oprogramowanie płatne 
+c
+23
+--------------- HTML to: 
+format zapisu grafiki wektorowej (Highspeed Temporary Media Language) 
+obiektowy język programowania (porównywalny z językiem C++, C#)
+język opisu (hiper)tekstu rozumiany przez przeglądarki (HyperText Meta Language)
+urządzenie kształtem przypominające drążek sterowy samolotu
+drukarka termiczna (High Temperature Machine Loader)
+c
+24
+--------------- BIOS to:
+aplikacja służąca do sporządzania biorytmów
+specjalna wersja programu antywirusowego
+program na płycie głównej służący m.in. do załadowania systemu operacyjnego
+jednostka informacji
+produkt biodegradowalny
+c
+25
+--------------- Wyjustować tekst to znaczy: 
+wyrównać tekst do lewej
+wyrównać tekst do lewej i do prawej
+podzielić tekst na akapity
+napisać wielkimi literami
+wyróżnienie kolorem
+b

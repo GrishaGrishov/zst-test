@@ -1772,15 +1772,15 @@ hr {
     ?>
     
     function onChangeId() {
-        id = document.getElementById("test_id").value
-        temat = ""
-        autor = ""
+        id = document.getElementById("test_id").value;
+        temat = "";
+        autor = "";
         if (id != "") {
             temat = test_ids[id][0];
             autor = test_ids[id][1];
         }
-        document.getElementById("temat").value = temat
-        document.getElementById("autor").value = autor
+        document.getElementById("temat").value = temat;
+        document.getElementById("autor").value = autor;
     }
 
 </script>
@@ -1930,6 +1930,7 @@ Autor testu:
 <input
     type="text"
     name="autor"
+    id="autor"
     class="input-wide"
     value="<?= htmlspecialchars(
         $autorTestu,
