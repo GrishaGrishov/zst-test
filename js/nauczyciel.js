@@ -1,3 +1,4 @@
+
 const przyciski =
 	document.querySelectorAll(
 		".przyciski button"
@@ -10,7 +11,7 @@ const zawartosci =
 
 przyciski.forEach(przycisk => {
 	przycisk.addEventListener("click", () => {
-
+		
 		// Wyłącz wszystkie zakładki
 		przyciski.forEach(p =>
 			p.classList.remove("aktywna")
@@ -28,3 +29,13 @@ przyciski.forEach(przycisk => {
 		).classList.add("aktywna");
 	});
 });
+
+function onSubmit() {
+	v = document.getElementById("skala").selectedIndex;
+	if (v <= 0) {
+		alert("Nie wybrano skali ocen");
+		return false;
+	}
+	return true;
+}
+

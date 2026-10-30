@@ -1439,7 +1439,6 @@ Panel nauczyciela
 </title>
 
 <link rel="stylesheet" href="css/style.css">
-<script src="js/nauczyciel.js"></script>
 
 
 <script>
@@ -1542,6 +1541,14 @@ Wyloguj
                 data-zakladka="test">
             test
         </button>
+        <button 
+                data-zakladka="test2">
+            test2
+        </button>
+        <button 
+                data-zakladka="test3">
+            test3
+        </button>
 
         <button 
                 data-zakladka="ustawienia">
@@ -1560,287 +1567,249 @@ Wyloguj
 <div id="test" class="zawartosc">
 To jest test
 </div>
+<div id="test2" class="zawartosc">
+To jest test2
+</div>
+<div id="test3" class="zawartosc">
+To jest test3
+</div>
 <div id="ustawienia" class="zawartosc">
-<!-- ==================================================
+	<!-- ==================================================
      USTAWIENIA TESTU
      ================================================== -->
 
-<h2>
-Ustawienia testu
-</h2>
+	<h2>
+	Ustawienia testu
+	</h2>
 
-<script>
-function onSubmit() {
-	v = document.getElementById("skala").selectedIndex;
-	if (v <= 0) {
-		alert("Nie wybrano skali ocen");
-		return false;
-	}
-	return true;
-}
-</script>
+	<form method="post" onSubmit="return onSubmit()">
 
-<form method="post" onSubmit="return onSubmit()">
-
-<div class="wiersz input-wide">
-<div>
-<p>
-
-<label>
-<strong>
-Identyfikator testu:
-</strong>
-</label>
-
-<br>
-
-<select
-    name="test_id"
-    id="test_id"
-    onchange="onChangeId()"
-    >
-    <option value="">&lt;WYBIERZ TEST&gt;</option>";
-    <?php 
-    $tx = "";
-    foreach ($test_ids as $value) {
-        $id = $value[0];
-        $temat = $value[1];
-        $autor = $value[2];
-        $sel = "";
-        if ($test_id == $id) {
-            $sel = " selected=1";
-            $tx = $temat;
-            $ax = $autor;
-        }
-        echo "<option value=\"$id\"$sel>$id</option>\r\n";
-    }
-    ?>
-</select>
-<script>
-    setTimeout(() => {document.getElementById("temat").value = "<?= $tx ?>";}, 100);
-    setTimeout(() => {document.getElementById("autor").value = "<?= $ax ?>";}, 100);
-</script>
-</p>
-</div>
-<div>
-<p>
-
-<label>
-<strong>
-Autor testu:
-</strong>
-</label>
-
-<br>
-
-<input
-    type="text"
-    name="autor"
-    id="autor"
-    class="input-wide"
-    value="<?= htmlspecialchars(
-        $autorTestu,
-        ENT_QUOTES,
-        "UTF-8"
-    ) ?>"
-    placeholder="np. Jan Kowalski"
-    required
->
-
-</p>
-</div>
-</div>
-
-
-<p>
-
-<label>
-<strong>
-Temat testu:
-</strong>
-</label>
-
-<br>
-
-<input
-    type="text"
-    name="temat"
-    id="temat"
-    class="input-wide"
-    placeholder="np. Informatyka - sieci komputerowe"
-    value="<?= htmlspecialchars(
-        $temat,
-        ENT_QUOTES,
-        "UTF-8"
-    ) ?>"
-    required
->
-
-</p>
-
-<div class="wiersz">
-	<div>
+		<div class="wiersz input-wide">
+			<div>
+				<p>
+					<label><strong>Identyfikator testu:</strong></label>
+					<br>
+					<select name="test_id" id="test_id" onchange="onChangeId()">
+						<option value="">&lt;WYBIERZ TEST&gt;</option>";
+						<?php 
+						$tx = "";
+						foreach ($test_ids as $value) {
+							$id = $value[0];
+							$temat = $value[1];
+							$autor = $value[2];
+							$sel = "";
+							if ($test_id == $id) {
+								$sel = " selected=1";
+								$tx = $temat;
+								$ax = $autor;
+							}
+							echo "<option value=\"$id\"$sel>$id</option>\r\n";
+						}
+						?>
+					</select>
+					<script>
+						setTimeout(() => {document.getElementById("temat").value = "<?= $tx ?>";}, 100);
+						setTimeout(() => {document.getElementById("autor").value = "<?= $ax ?>";}, 100);
+					</script>
+				</p>
+			</div>
+		
+			<div>
+				<p>
+					<label><strong>Autor testu:</strong></label>
+					<br>
+					<input type="text" name="autor"
+						id="autor" class="input-wide"
+						value="<?= htmlspecialchars(
+							$autorTestu,
+							ENT_QUOTES,
+							"UTF-8"
+						) ?>"
+						placeholder="np. Jan Kowalski"
+						required
+					>
+				</p>
+			</div>
 		<p>
+			<label><strong>Temat testu:</strong></label>
+			<br>
 
-		<label>
-		<strong>
-		Klasa:
-		</strong>
-		</label>
-
-		<br>
-
-		<input
-			type="text"
-			name="klasa"
-			class="input-mid"
-			value="<?= htmlspecialchars(
-				$klasaTestu,
-				ENT_QUOTES,
-				"UTF-8"
-			) ?>"
-			placeholder="np. 8A"
-			required
-		>
+			<input type="text" name="temat" id="temat"
+				class="input-wide"
+				placeholder="np. Informatyka - sieci komputerowe"
+				value="<?= htmlspecialchars(
+					$temat,
+					ENT_QUOTES,
+					"UTF-8"
+				) ?>"
+				required
+			>
 
 		</p>
 
+		<div class="wiersz">
+			<div>
+				<p>
 
-		<p>
+				<label>
+				<strong>
+				Klasa:
+				</strong>
+				</label>
 
-		<label>
-		<strong>
-		Liczba pytań dla ucznia:
-		</strong>
-		</label>
+				<br>
 
-		<br>
+				<input
+					type="text"
+					name="klasa"
+					class="input-mid"
+					value="<?= htmlspecialchars(
+						$klasaTestu,
+						ENT_QUOTES,
+						"UTF-8"
+					) ?>"
+					placeholder="np. 8A"
+					required
+				>
 
-		<input
-			type="number"
-			name="liczba_pytan"
-			value="<?= $liczbaPytan ?>"
-			min="1"
-			required
-		>
-
-		</p>
-
-
-		<p>
-
-		<label>
-		<strong>
-		Czas testu w minutach:
-		</strong>
-		</label>
-
-		<br>
-
-		<input
-			type="number"
-			name="czas_minuty"
-			value="<?= $czasMinuty ?>"
-			min="1"
-			required
-		>
-
-		</p>
-	</div>
-
-	<div>
-	<label><strong>Skala ocen:</strong></label>
-
-	<br>
-
-	<select
-		name="skala"
-		id="skala"
-		onchange="onChangeSkala()"
-		>
-		<option value="">&lt;WYBIERZ SKALĘ OCEN&gt;</option>";
-		<?php 
-		foreach ($opcje["grades"] as $key => $val) {
-			$sel = "";
-			if ($skalaTestu == $key) {
-				$sel = " selected=\"1\"";
-			}
-			$tx = "<table class='scale'><tr><th>Procent</th><th>Ocena</th></tr>";
-			foreach ($val as $k => $v) {
-				$tx .= "<tr><td>$k%</td><td>$v</td></tr>"; 
-			}
-			$tx .= "</table>";
-			echo "<option value=$key data-txt=\"$tx\" $sel>$key</option>";
-		}
-		?>
-	</select>
-	<script>
-		setTimeout(() => {onChangeSkala();}, 100);
-		function onChangeSkala() {
-			const select = document.getElementById("skala");
-			const opcja = select.options[select.selectedIndex];	
-			txt = opcja.dataset.txt;
-			if (txt === undefined) {
-				txt = "<span class='error'>Nie określono skali ocen</span>";
-			}
-			
-			document.getElementById("skala_txt").innerHTML = txt;
-		}
-	</script>
-
-	</p>
-
-	<p>Skala ocen:</p>
-	<div id="skala_txt"></div>
-	<p>
+				</p>
 
 
-	</div>
+				<p>
 
-</div> <!-- class="wiersz" -->
+				<label>
+				<strong>
+				Liczba pytań dla ucznia:
+				</strong>
+				</label>
 
-<span>
-    <button type="submit" name="zapisz_ustawienia" id="zapisz_ustawienia">
-        Zapisz ustawienia
-    </button>
-</span>
+				<br>
 
-<span class="vcenter">
+				<input
+					type="number"
+					name="liczba_pytan"
+					value="<?= $liczbaPytan ?>"
+					min="1"
+					required
+				>
 
-    <span>
-        Link do testu: 
-        <?php
-            $h = $_SERVER['SERVER_ADDR'];
-            $p = $_SERVER['SERVER_PORT'];
-            if ($p != "80") {
-                $h .= ":$p";
-            }
-            $a = $_SERVER['CONTEXT_PREFIX'];
-            $s = $_SERVER['REQUEST_SCHEME'];
-            $link = "$s://$h$a";
-            echo "<a href=\"$link\" target=\"blank\">{$link}</a>";
-        ?> 
-    </span>
-    <span>
-        <?php
-            echo '<img class="icon" src="copy.png" title="Kopiuj adres" onclick="copy_link(\'$link\')"><br>';
-        ?>
-    </span>
-    <script>
-		async function copy_link(link) {
-			try {
-				await navigator.clipboard?.writeText(link);
-				alert("Adres wstawiony do schowka");
-			} catch (err) {
-				alert("Ta funkcja nie działa w tej przeglądarce");
-				console.error("Błąd kopiowania:", err);
-			}
-		}
-    </script>
-</span>
-</div>
+				</p>
 
-</form>
+
+				<p>
+
+				<label>
+				<strong>
+				Czas testu w minutach:
+				</strong>
+				</label>
+
+				<br>
+
+				<input
+					type="number"
+					name="czas_minuty"
+					value="<?= $czasMinuty ?>"
+					min="1"
+					required
+				>
+
+				</p>
+			</div>
+
+			<div>
+			<label><strong>Skala ocen:</strong></label>
+
+			<br>
+
+			<select
+				name="skala"
+				id="skala"
+				onchange="onChangeSkala()"
+				>
+				<option value="">&lt;WYBIERZ SKALĘ OCEN&gt;</option>";
+				<?php 
+				foreach ($opcje["grades"] as $key => $val) {
+					$sel = "";
+					if ($skalaTestu == $key) {
+						$sel = " selected=\"1\"";
+					}
+					$tx = "<table class='scale'><tr><th>Procent</th><th>Ocena</th></tr>";
+					foreach ($val as $k => $v) {
+						$tx .= "<tr><td>$k%</td><td>$v</td></tr>"; 
+					}
+					$tx .= "</table>";
+					echo "<option value=$key data-txt=\"$tx\" $sel>$key</option>";
+				}
+				?>
+			</select>
+			<script>
+				setTimeout(() => {onChangeSkala();}, 100);
+				function onChangeSkala() {
+					const select = document.getElementById("skala");
+					const opcja = select.options[select.selectedIndex];	
+					txt = opcja.dataset.txt;
+					if (txt === undefined) {
+						txt = "<span class='error'>Nie określono skali ocen</span>";
+					}
+					
+					document.getElementById("skala_txt").innerHTML = txt;
+				}
+			</script>
+
+			</p>
+
+			<p>Skala ocen:</p>
+			<div id="skala_txt"></div>
+			<p>
+
+
+			</div>
+
+		</div> <!-- class="wiersz" -->
+
+		<span>
+			<button type="submit" name="zapisz_ustawienia" id="zapisz_ustawienia">
+				Zapisz ustawienia
+			</button>
+		</span>
+
+		<span class="vcenter">
+
+			<span>
+				Link do testu: 
+				<?php
+					$h = $_SERVER['SERVER_ADDR'];
+					$p = $_SERVER['SERVER_PORT'];
+					if ($p != "80") {
+						$h .= ":$p";
+					}
+					$a = $_SERVER['CONTEXT_PREFIX'];
+					$s = $_SERVER['REQUEST_SCHEME'];
+					$link = "$s://$h$a";
+					echo "<a href=\"$link\" target=\"blank\">{$link}</a>";
+				?> 
+			</span>
+			<span>
+				<?php
+					echo '<img class="icon" src="copy.png" title="Kopiuj adres" onclick="copy_link(\'$link\')"><br>';
+				?>
+			</span>
+			<script>
+				async function copy_link(link) {
+					try {
+						await navigator.clipboard?.writeText(link);
+						alert("Adres wstawiony do schowka");
+					} catch (err) {
+						alert("Ta funkcja nie działa w tej przeglądarce");
+						console.error("Błąd kopiowania:", err);
+					}
+				}
+			</script>
+		</span>
+		</div>
+
+	</form>
 
 
 <hr>
@@ -2532,38 +2501,7 @@ Podgląd wyniku
 
 </div>
 
-<script>
-    const przyciski =
-        document.querySelectorAll(
-            ".przyciski button"
-        );
-
-    const zawartosci =
-        document.querySelectorAll(
-            ".zawartosc"
-        );
-
-    przyciski.forEach(przycisk => {
-        przycisk.addEventListener("click", () => {
-
-            // Wyłącz wszystkie zakładki
-            przyciski.forEach(p =>
-                p.classList.remove("aktywna")
-            );
-
-            zawartosci.forEach(z =>
-                z.classList.remove("aktywna")
-            );
-
-            // Aktywuj wybraną zakładkę
-            przycisk.classList.add("aktywna");
-
-            document.getElementById(
-                przycisk.dataset.zakladka
-            ).classList.add("aktywna");
-        });
-    });
-</script>
+<script src="js/nauczyciel.js"></script>
 
 
 </body>
