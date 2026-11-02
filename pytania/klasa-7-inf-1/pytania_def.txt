@@ -38,7 +38,7 @@ Który format grafiki obsługuje przezroczystość?
 - TXT
 * PNG
 - MP3
-- WAV
+- JPG
 ===
 Do czego służą warstwy w programie graficznym?
 - Do zmiany rozdzielczości monitora

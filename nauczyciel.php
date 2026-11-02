@@ -445,6 +445,9 @@ function getTestIds($folder) {
         
         $temat = $plik;
         $autor = "";
+		$skala = "";
+		$liczba_pytan = "";
+		$czas_minuty = "";
         if (is_file($readme)) {
             
             $linie = file(
@@ -464,11 +467,9 @@ function getTestIds($folder) {
                     continue;
                 }
 
-
                 $klucz = trim(
                     $czesci[0]
                 );
-                
                 
                 if ($klucz == "temat") {
                     $temat = trim($czesci[1]);
@@ -476,12 +477,19 @@ function getTestIds($folder) {
                 elseif ($klucz == "autor") {
                     $autor = trim($czesci[1]);
                 }
+                elseif ($klucz == "skala") {
+                    $skala = trim($czesci[1]);
+                }
+                elseif ($klucz == "liczba_pytan") {
+                    $liczba_pytan = trim($czesci[1]);
+                }
+                elseif ($klucz == "czas_minuty") {
+                    $czas_minuty = trim($czesci[1]);
+                }
             }
         }
-        $ids[] = array($plik, $temat, $autor);
-
+        $ids[] = array($plik, $temat, $autor, $skala, $liczba_pytan, $czas_minuty);
     }
-
 
     return $ids;
 }
@@ -496,20 +504,13 @@ function usunStareLogo($folder)
         return;
     }
 
-
-    $pliki =
-        scandir(
-            $folder
-        );
-
+    $pliki = scandir($folder);
 
     if ($pliki === false) {
         return;
     }
 
-
     foreach ($pliki as $plik) {
-
         if (
             $plik === "." ||
             $plik === ".."
@@ -517,19 +518,11 @@ function usunStareLogo($folder)
             continue;
         }
 
+        $sciezka = $folder . DIRECTORY_SEPARATOR . $plik;
 
-        $sciezka =
-            $folder .
-            DIRECTORY_SEPARATOR .
-            $plik;
-
-
-        if (
-            !is_file($sciezka)
-        ) {
+        if (!is_file($sciezka)) {
             continue;
         }
-
 
         $rozszerzenie =
             strtolower(
@@ -538,7 +531,6 @@ function usunStareLogo($folder)
                     PATHINFO_EXTENSION
                 )
             );
-
 
         $nazwa =
             pathinfo(
@@ -1766,7 +1758,10 @@ hr {
         $id = $value[0];
         $temat = $value[1];
         $autor = $value[2];
-        echo "    '$id': ['$temat', '$autor'],\n";
+		$skala = $value[3];
+		$liczba_pytan = $value[4];
+		$czas_minuty = $value[5];
+        echo "    '$id': ['$temat', '$autor', '$skala', '$liczba_pytan', '$czas_minuty'],\n";
     }
     echo "    }\n";
     ?>
@@ -1775,12 +1770,22 @@ hr {
         id = document.getElementById("test_id").value;
         temat = "";
         autor = "";
+        skala = "";
+		liczba_pytan = 25;
+		czas_minuty = 25;
         if (id != "") {
             temat = test_ids[id][0];
             autor = test_ids[id][1];
+            skala = test_ids[id][2];
+            liczba_pytan = test_ids[id][3];
+			czas_minuty = test_ids[id][4];
         }
         document.getElementById("temat").value = temat;
         document.getElementById("autor").value = autor;
+		document.getElementById("skala").value = skala;
+		onChangeSkala();
+		document.getElementById("liczba_pytan").value = liczba_pytan;
+		document.getElementById("czas_minuty").value = czas_minuty;
     }
 
 </script>
@@ -2013,6 +2018,7 @@ Liczba pytań dla ucznia:
 <input
     type="number"
     name="liczba_pytan"
+	id="liczba_pytan"
     value="<?= $liczbaPytan ?>"
     min="1"
     required
@@ -2034,6 +2040,7 @@ Czas testu w minutach:
 <input
     type="number"
     name="czas_minuty"
+	id="czas_minuty"
     value="<?= $czasMinuty ?>"
     min="1"
     required

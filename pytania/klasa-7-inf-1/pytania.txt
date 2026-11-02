@@ -44,7 +44,7 @@ BMP
 TXT
 PNG
 MP3
-WAV
+JPG
 c
 7
 Do czego służą warstwy w programie graficznym?
