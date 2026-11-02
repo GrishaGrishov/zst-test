@@ -1,199 +1,201 @@
 1
-Który z podanych elementów jest urządzeniem wejściowym (czyli wprowadzającym dane) komputera?
-Monitor
-Klawiatura
-Drukarka
-Głośnik
-Projektor
+Który z poniższych formatów plików jest najczęściej wykorzystywany do zapisywania zdjęć?
+TXT
+JPG
+EXE
+MP3
+DOCX
 b
-2 
-Jakie rozszerzenie ma typowy plik tekstowy?
-.jpg
-.mp3
-.txt
-.exe
-.png
-c
+2
+Co oznacza skrót RGB w grafice komputerowej?
+Red, Green, Blue
+Real Graphic Bitmap
+Raster Graphics Base
+Red, Gray, Black
+Right, Green, Background
+a
 3
-Który program służy do tworzenia i modyfikacji dokumentów tekstowych?
-Edytor tekstu (np. MS Word, LibreOffice Writer, Notatnik)
-Odtwarzacz muzyki (np. WinAmp, AIMP)
-Kalkulator
-Przeglądarka zdjęć (np. Google Gallery)
-Program antywirusowy (np. Avast, Kaspersky Antivirus)
-a
-4 
-Co oznacza skrót WWW?
-World Wide Web
-Nic nie znaczy, to przypadkowe litery
-Wonderful Windows Workshop
-Wiem, Widzę, Wchodzę
-Whirlpool Washing Wookie
-a
+Które narzędzie służy do zaznaczania fragmentu obrazu?
+Pędzel lub aerograf
+Wypełnienie gradientem
+Zaznaczenie prostokątne
+Tekst
+Powiększenie
+c
+4
+Co się stanie po zastosowaniu narzędzia Kadrowanie?
+Obraz zostanie obrócony
+Zostanie zmieniony (zmniejszony) rozmiar pliku
+Zostanie wycięty wybrany fragment obrazu
+Obraz zostanie rozjaśniony
+Zostanie dodany tekst
+c
 5
-Które z podanych urządzeń służy do przechowywania danych?
-Mysz
-Monitor
-Dysk twardy
-Mikrofon
-Kamera internetowa
-c
+Czym różni się grafika rastrowa od wektorowej?
+Rastrowa składa się z pikseli, a wektorowa z obiektów opisanych matematycznie
+Wektorowa składa się wyłącznie ze kolorowych zdjęć
+Rastrowa nie może być kolorowa
+Wektorowa zawsze zajmuje więcej miejsca
+Nie ma żadnej różnicy
+a
 6
-Który z podanych programów jest przeglądarką internetową?
-Mozilla Firefox
-Microsoft Paint
-Notatnik
-Kalkulator
-Eksplorator plików
-a
-7 
-Co jest przykładem bezpiecznego hasła?
-123456
-haslo
-Jan2000
-Qwerty
-M7!kP2#zL9
-e
-8 
-Do czego służy program antywirusowy?
-Do tworzenia prezentacji o zakażeniach wirusowych
-Do ochrony komputera przed złośliwym oprogramowaniem
-Do drukowania dokumentów
-Do zarządzania programem szczepień
-Do zmiany tapety
-b
-9 
-Która jednostka służy do określania rozmiaru pliku?
-Kilogram
-Metr
-Bajt
-Litr
-Sekunda
+Który format grafiki obsługuje przezroczystość?
+BMP
+TXT
+PNG
+MP3
+WAV
 c
-10 
-Jakie programy służą do edycji plików graficznych?
-LibreOffice Writer, Notatnik
-Paint, GIMP
-Inkscape, Scratch
-Mozilla Firefox
+7
+Do czego służą warstwy w programie graficznym?
+Do zmiany rozdzielczości monitora
+Do oddzielnego rozmieszczania i edytowania elementów obrazu
+Do usuwania wszystkich kolorów
+Do kompresowania plików metodą stratną
+Do drukowania obrazu na drukarce wielkoformatowej
 b
+8
+Co oznacza rozdzielczość obrazu 1920 × 1080?
+Liczbę kolorów RGB na obrazie
+Liczbę pikseli w poziomie i pionie
+Rozmiar pliku w kilobajtach
+Liczbę warstw w pionie i w poziomie
+Częstotliwość odświeżania ekranu
+b
+9
+Która czynność pozwala zmienić jasność zdjęcia?
+Kadrowanie
+Obracanie o wybrany kąt
+Korekcja jasności
+Zmiana formatu pliku na TXT
+Zmiana nazwy pliku
+c
+10
+Co oznacza skrót 3D?
+Trzy dokumenty
+Trzy domeny
+Trzy wymiary
+Trzy kolory
+Trzy programy
+c
 11
-Który z podanych elementów jest systemem operacyjnym?
-MS Windows
-Google Chrome
-Microsoft Word
-MS Paint
-ChatGPT
-a
-12
-Czym jest folder?
-Programem antywirusowym
-Miejscem służącym do trzymania i organizowania plików
-Rodzajem wirusa
-Urządzeniem wejściowym
-Rodzajem monitora
+Do czego służy Tinkercad?
+Do edycji dokumentów tekstowych
+Do projektowania m.in. modeli 3D
+Do montażu filmów
+Do tworzenia baz danych
+Do programowania systemów operacyjnych
 b
+12
+W jakim układzie współrzędnych najczęściej pracujemy podczas projektowania 3D?
+Jednowymiarowym (X)
+Dwuwymiarowym (X, Y)
+Trójwymiarowym (X, Y, Z)
+Czterowymiarowym (X, Y, Z, T)
+Nie używamy współrzędnych
+c
 13
-Co oznacza pojęcie „piksel”?
-To samo co "kapsel"
-To samo co "bit"
-Najmniejszy element (punkt) obrazu rastrowego
-Rodzaj koloru z palety RGB
-Biały lub czarny kolor
+Która bryła jest dostępna jako podstawowy kształt w Tinkercad?
+Sześcian
+Papryka
+Arkusz kalkulacyjny
+Plik tekstowy
+Formuła matematyczna
 a
 14
-Jakie są różnice pomiędzy GIMPem a Paintem?
-Żadne, oba programy mają identyczne funkcje
-GIMP jest do edycji obrazów 3D 
-GIMP pozwala na pracę z warstwami i ma bogatszy zestaw narzędzi
-Paint jest znacznie bardziej rozbudowany
-Paint jest darmowy a GIMP kosztuje 350 zł
-c
-15 
-Które z wymienionych operacji należą do edycji grafiki?
-Wyrównywanie do prawego marginesu
-Kadrowanie, zmiana nasycenia kolorów, wyostrzanie
-Wyliczanie wartości liczbowych
-Odczyt zawartości folderu
-Zapisywanie dokumentu tekstowego
-a
-16
-Które z wymienionych są elementami składowymi komputera?
-karta upominkowa, kabel, wskaźnik laserowy
-wtyczka RJ, światłowód, router
-zasilacz, żarówka, switch
-karta muzyczna, pamięć ROM, czytnik płyt CD
-karta graficzna, telewizor, licznik kroków
-a
-17
-Który z podanych formatów jest formatem obrazu?
-mp3
-jpg
-docx
-xlsx
-txt
+Do czego służy funkcja Group (Grupuj) w Tinkercad?
+Do usuwania projektu
+Do łączenia kilku obiektów w jeden obiekt
+Do zmiany języka programu
+Do zapisywania projektu jako zdjęcia
+Do obracania widoku
 b
-18 
-Co możemy uzyskać stosując warstwy w edytorze grafiki?
-Automatyczne rysowanie kształtów geometrycznych
-Szybkie zapisywanie grafiki
-Przenikanie (półprzezroczystość) obiektów, tworzenie fotomontaży
-Warstwy w niczym nie pomagają
-Kompresowanie plików (zip)
+15
+Jak można wykonać otwór w bryle w Tinkercad?
+Użyć narzędzia Tekst
+Uderzyć jednym obiektem w drugi
+Ustawić jeden obiekt jako "otwór" i połączyć go z bryłą
+Zmniejszyć powiększenie widoku
+Zablokować obiekt
 c
-19
-Który skrót klawiaturowy służy najczęściej do kopiowania zaznaczonego tekstu?
-Ctrl + V
-Ctrl + X
-Ctrl + C
-Ctrl + Z
-Ctrl + A
-c
-20
-Co należy zrobić, gdy otrzymasz podejrzaną wiadomość z linkiem?
-Natychmiast kliknąć link
-Przekazać ją wszystkim znajomym
-Podać nadawcy swoje hasło
-Nie klikać linku i zweryfikować nadawcę
-Pobrać wszystkie załączniki
-d
-21
------------ Ile różnych wartości może przyjąć jeden bit? 
-1 
-2 
-8 
 16
-256 
+Jak nazywa się proces wytwarzania przedmiotu poprzez nakładanie kolejnych warstw materiału?
+Skanowanie
+Frezowanie
+Drukowanie 3D
+Fotografowanie
+Kopiowanie
+c
+17
+Co należy zrobić, aby zmienić wysokość obiektu w Tinkercad?
+Przeciągnąć odpowiedni uchwyt wymiaru wysokości
+Zmienić nazwę obiektu
+Włączyć tryb tekstowy
+Usunąć obiekt
+Przesunąć obiekt w odpowiednie miejsce
+a
+18
+Czym jest przeglądarka internetowa?
+Programem do odtwarzania muzyki
+Programem do przeglądania stron internetowych
+Rodzajem drukarki
+Programem antywirusowym
+Edytorem grafiki
+b
+19
+Które z poniższych haseł jest najbezpieczniejsze?
+123456
+qwerty
+jan2009
+M0cne!Haslo_72
+password
+d
+20
+Co oznacza skrót CPU?
+Pamięć operacyjna
+Procesor
+Dysk twardy
+Karta graficzna
+Monitor
+b
+21
+Do czego służy pamięć RAM?
+Do długotrwałego przechowywania plików po wyłączeniu komputera
+Do przechowywania danych i programów używanych aktualnie przez komputer
+Do drukowania dokumentów
+Do chłodzenia procesora
+Do podłączania monitora
 b
 22
--------------- Oprogramowanie typu OEM to:
-bezpłatne oprogramowanie, które można instalować tylko na jednym komputerze
-oprogramowanie rozprowadzane pojedynczo w punktach sprzedaży detalicznej 
-oprogramowanie zainstalowane fabrycznie na nowych komputerach 
-oprogramowanie, które ma ograniczoną ilość uruchomień
-oprogramowanie płatne 
-c
+Co oznacza funkcja "Odbicie" w GIMPie?
+Powiększenie lub pomniejszenie obiektu
+Obrócenie obiektu o wybrany kąt
+Utworzenie kopii obiektu
+Przerzucenie obiektu w pionie lub w poziomie
+Zmianę koloru obiektu
+d
 23
---------------- HTML to: 
-format zapisu grafiki wektorowej (Highspeed Temporary Media Language) 
-obiektowy język programowania (porównywalny z językiem C++, C#)
-język opisu (hiper)tekstu rozumiany przez przeglądarki (HyperText Meta Language)
-urządzenie kształtem przypominające drążek sterowy samolotu
-drukarka termiczna (High Temperature Machine Loader)
+Jakie zadanie spełnia system operacyjny komputera?
+Wyłącznie umożliwia przeglądanie internetu
+Zwiększa fizyczną pojemność dysku
+Zarządza pracą komputera i umożliwia uruchamianie programów
+Zastępuje procesor
+Służy wyłącznie do edycji dokumentów
 c
 24
---------------- BIOS to:
-aplikacja służąca do sporządzania biorytmów
-specjalna wersja programu antywirusowego
-program na płycie głównej służący m.in. do załadowania systemu operacyjnego
-jednostka informacji
-produkt biodegradowalny
-c
-25
---------------- Wyjustować tekst to znaczy: 
-wyrównać tekst do lewej
-wyrównać tekst do lewej i do prawej
-podzielić tekst na akapity
-napisać wielkimi literami
-wyróżnienie kolorem
+Co oznacza przezroczystość (kanał alfa) w grafice komputerowej?
+Stopień nasycenia koloru
+Stopień widoczności lub przezroczystości danego elementu
+Rozdzielczość obrazu
+Liczbę kolorów w obrazie
+Jasność monitora
 b
+25
+Do czego służy funkcja Ungroup (Rozgrupuj) w Tinkercad?
+Do usunięcia wszystkich obiektów
+Do połączenia elementów w jeden i robienia otworów
+Do rozdzielenia wcześniej połączonych obiektów
+Do utworzenia kopii grupy
+Do wyrównania obiektów
+c
+

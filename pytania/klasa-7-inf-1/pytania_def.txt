@@ -1,0 +1,174 @@
+Który z poniższych formatów plików jest najczęściej wykorzystywany do zapisywania zdjęć?
+- TXT
+* JPG
+- EXE
+- MP3
+- DOCX
+===
+Co oznacza skrót RGB w grafice komputerowej?
+* Red, Green, Blue
+- Real Graphic Bitmap
+- Raster Graphics Base
+- Red, Gray, Black
+- Right, Green, Background
+===
+Które narzędzie służy do zaznaczania fragmentu obrazu?
+- Pędzel lub aerograf
+- Wypełnienie gradientem
+* Zaznaczenie prostokątne
+- Tekst
+- Powiększenie 
+===
+Co się stanie po zastosowaniu narzędzia Kadrowanie?
+- Obraz zostanie obrócony
+- Zostanie zmieniony (zmniejszony) rozmiar pliku
+* Zostanie wycięty wybrany fragment obrazu
+- Obraz zostanie rozjaśniony
+- Zostanie dodany tekst
+===
+Czym różni się grafika rastrowa od wektorowej?
+* Rastrowa składa się z pikseli, a wektorowa z obiektów opisanych matematycznie
+- Wektorowa składa się wyłącznie ze kolorowych zdjęć
+- Rastrowa nie może być kolorowa
+- Wektorowa zawsze zajmuje więcej miejsca
+- Nie ma żadnej różnicy
+===
+Który format grafiki obsługuje przezroczystość?
+- BMP
+- TXT
+* PNG
+- MP3
+- WAV
+===
+Do czego służą warstwy w programie graficznym?
+- Do zmiany rozdzielczości monitora
+* Do oddzielnego rozmieszczania i edytowania elementów obrazu
+- Do usuwania wszystkich kolorów
+- Do kompresowania plików metodą stratną
+- Do drukowania obrazu na drukarce wielkoformatowej
+===
+Co oznacza rozdzielczość obrazu 1920 × 1080?
+- Liczbę kolorów RGB na obrazie
+* Liczbę pikseli w poziomie i pionie
+- Rozmiar pliku w kilobajtach
+- Liczbę warstw w pionie i w poziomie
+- Częstotliwość odświeżania ekranu
+===
+Która czynność pozwala zmienić jasność zdjęcia?
+- Kadrowanie
+- Obracanie o wybrany kąt
+* Korekcja jasności
+- Zmiana formatu pliku na TXT
+- Zmiana nazwy pliku
+===
+Co oznacza skrót 3D?
+- Trzy dokumenty
+- Trzy domeny
+* Trzy wymiary
+- Trzy kolory
+- Trzy programy
+===
+Do czego służy Tinkercad?
+- Do edycji dokumentów tekstowych
+* Do projektowania m.in. modeli 3D
+- Do montażu filmów
+- Do tworzenia baz danych
+- Do programowania systemów operacyjnych
+===
+W jakim układzie współrzędnych najczęściej pracujemy podczas projektowania 3D?
+- Jednowymiarowym (X)
+- Dwuwymiarowym (X, Y)
+* Trójwymiarowym (X, Y, Z)
+- Czterowymiarowym (X, Y, Z, T)
+- Nie używamy współrzędnych
+===
+Która bryła jest dostępna jako podstawowy kształt w Tinkercad?
+* Sześcian
+- Papryka
+- Arkusz kalkulacyjny
+- Plik tekstowy
+- Formuła matematyczna
+===
+Do czego służy funkcja Group (Grupuj) w Tinkercad?
+- Do usuwania projektu
+* Do łączenia kilku obiektów w jeden obiekt
+- Do zmiany języka programu
+- Do zapisywania projektu jako zdjęcia
+- Do obracania widoku
+===
+Jak można wykonać otwór w bryle w Tinkercad?
+- Użyć narzędzia Tekst
+- Uderzyć jednym obiektem w drugi
+* Ustawić jeden obiekt jako "otwór" i połączyć go z bryłą
+- Zmniejszyć powiększenie widoku
+- Zablokować obiekt
+===
+Jak nazywa się proces wytwarzania przedmiotu poprzez nakładanie kolejnych warstw materiału?
+- Skanowanie
+- Frezowanie
+* Drukowanie 3D
+- Fotografowanie
+- Kopiowanie
+===
+Co należy zrobić, aby zmienić wysokość obiektu w Tinkercad?
+* Przeciągnąć odpowiedni uchwyt wymiaru wysokości
+- Zmienić nazwę obiektu
+- Włączyć tryb tekstowy
+- Usunąć obiekt
+- Przesunąć obiekt w odpowiednie miejsce
+===
+Czym jest przeglądarka internetowa?
+- Programem do odtwarzania muzyki
+* Programem do przeglądania stron internetowych
+- Rodzajem drukarki
+- Programem antywirusowym
+- Edytorem grafiki
+===
+Które z poniższych haseł jest najbezpieczniejsze?
+- 123456
+- qwerty
+- jan2009
+* M0cne!Haslo_72
+- password
+===
+Co oznacza skrót CPU?
+- Pamięć operacyjna
+* Procesor
+- Dysk twardy
+- Karta graficzna
+- Monitor
+===
+Do czego służy pamięć RAM?
+- Do długotrwałego przechowywania plików po wyłączeniu komputera
+* Do przechowywania danych i programów używanych aktualnie przez komputer
+- Do drukowania dokumentów
+- Do chłodzenia procesora
+- Do podłączania monitora
+===
+Co oznacza funkcja "Odbicie" w GIMPie?
+- Powiększenie lub pomniejszenie obiektu
+- Obrócenie obiektu o wybrany kąt
+- Utworzenie kopii obiektu
+* Przerzucenie obiektu w pionie lub w poziomie
+- Zmianę koloru obiektu
+===
+Jakie zadanie spełnia system operacyjny komputera?
+- Wyłącznie umożliwia przeglądanie internetu
+- Zwiększa fizyczną pojemność dysku
+* Zarządza pracą komputera i umożliwia uruchamianie programów
+- Zastępuje procesor
+- Służy wyłącznie do edycji dokumentów
+===
+Co oznacza przezroczystość (kanał alfa) w grafice komputerowej?
+- Stopień nasycenia koloru
+* Stopień widoczności lub przezroczystości danego elementu
+- Rozdzielczość obrazu
+- Liczbę kolorów w obrazie
+- Jasność monitora
+===
+Do czego służy funkcja Ungroup (Rozgrupuj) w Tinkercad?
+- Do usunięcia wszystkich obiektów
+- Do połączenia elementów w jeden i robienia otworów
+* Do rozdzielenia wcześniej połączonych obiektów
+- Do utworzenia kopii grupy
+- Do wyrównania obiektów
