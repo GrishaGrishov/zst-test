@@ -33,6 +33,7 @@ Który symbol jest typowy dla listy nienumerowanej?
 - Znak równości
 - Strzałka kursora
 ===
+{{img lista_numerowana.png}}
 Jak zakończyć tworzenie listy numerowanej w Writerze?
 * Nacisnąć dwa razy Enter
 - Nacisnąć Esc i zamknąć program
@@ -131,6 +132,7 @@ Co oznacza formatowanie tekstu?
 - Zmianę nazwy pliku
 - Skanowanie dokumentu
 ===
+{{img cc.png}}
 Jakie zastosowanie ma licencja Creative Commons?
 - Służy do ochrony komputera przed wirusami
 * Określa warunki, na jakich można korzystać z utworów i je rozpowszechniać
@@ -159,6 +161,7 @@ Co umożliwia funkcja Znajdź i zamień?
 - Zmianę rozmiaru i orientacji strony 
 - Wstawianie tabeli
 ===
+{{img klawiatura.png}}
 Który skrót klawiaturowy służy do kopiowania zaznaczonego tekstu?
 - Ctrl + X
 - Ctrl + Z
@@ -166,6 +169,7 @@ Który skrót klawiaturowy służy do kopiowania zaznaczonego tekstu?
 - Ctrl + A
 - Ctrl + P
 ===
+{{img pdf.png }}
 Czym jest plik PDF?
 - Plikiem przeznaczonym wyłącznie do edycji grafiki
 * Formatem dokumentu, który pozwala zachować jego układ na różnych urządzeniach

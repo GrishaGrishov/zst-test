@@ -207,13 +207,26 @@ function wczytajPytania($plik)
         $i += 8
     ) {
 
+		$tresc = trim($linie[$i + 1]);
+		$ar = explode('//', $tresc, 2);
+		if (count($ar) < 2) {
+			$img = "";
+		}
+		else {
+			$img = $ar[1];
+			$tresc = $ar[0];
+		}
+
         $pytania[] = [
 
             "numer" =>
                 trim($linie[$i]),
 
             "tresc" =>
-                trim($linie[$i + 1]),
+                trim($tresc),
+				
+			"obraz" =>
+				trim($img),
 
             "odpowiedzi" => [
 
@@ -1982,11 +1995,14 @@ elseif (
             // RYSUNEK
             // ----------------------------------------
 
-            $nazwaRysunku =
-                znajdzRysunek(
-                    $pytanie["numer"],
-					$folderPytania . "/" . $ustawienia["test_id"]
-                );
+			$nazwaRysunku = $pytanie["obraz"];
+			if ($nazwaRysunku == "") {
+				$nazwaRysunku =
+					znajdzRysunek(
+						$pytanie["numer"],
+						$folderPytania . "/" . $ustawienia["test_id"]
+					);
+			}
 
             ?>
 

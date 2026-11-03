@@ -32,14 +32,14 @@ Do wstawiania przypisów z automatyczną numeracją
 b
 5
 Który symbol jest typowy dla listy nienumerowanej?
-Np. 1.
+Numer 1.
 Kropka lub inny znak wypunktowania
 Znak paragrafu
 Znak równości
 Strzałka kursora
 a
 6
-Jak zakończyć tworzenie listy numerowanej w Writerze?
+Jak zakończyć tworzenie listy numerowanej w Writerze?//lista_numerowana.png
 Nacisnąć dwa razy Enter
 Nacisnąć Esc i zamknąć program
 Usunąć cały tekst
@@ -68,7 +68,7 @@ Przypis końcowy znajduje się na końcu dokumentu (lub sekcji)
 Przypis końcowy jest zawsze kolorowy
 Przypis końcowy nie ma numeru
 Przypis końcowy znajduje się w nagłówku
-Nie ma żadnej różnicy
+Przypis końcowy znajduje się na dole bieżącej strony
 a
 10
 Do czego służy podział tekstu na kolumny?
@@ -151,7 +151,7 @@ Zmianę nazwy pliku
 Skanowanie dokumentu
 a
 20
-Jakie zastosowanie ma licencja Creative Commons?
+Jakie zastosowanie ma licencja Creative Commons?//cc.png
 Służy do ochrony komputera przed wirusami
 Określa warunki, na jakich można korzystać z utworów i je rozpowszechniać
 Umożliwia odpłatne korzystanie z utworu
@@ -183,7 +183,7 @@ Zmianę rozmiaru i orientacji strony
 Wstawianie tabeli
 b
 24
-Który skrót klawiaturowy służy do kopiowania zaznaczonego tekstu?
+Który skrót klawiaturowy służy do kopiowania zaznaczonego tekstu?//klawiatura.png
 Ctrl + X
 Ctrl + Z
 Ctrl + C
@@ -191,7 +191,7 @@ Ctrl + A
 Ctrl + P
 c
 25
-Czym jest plik PDF?
+Czym jest plik PDF?//pdf.png 
 Plikiem przeznaczonym wyłącznie do edycji grafiki
 Formatem dokumentu, który pozwala zachować jego układ na różnych urządzeniach
 Programem do pisania tekstu wykorzystujęcym funkcję formatowania tekstu i grafiki

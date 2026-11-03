@@ -1,4 +1,5 @@
 import sys
+import re
 
 fin = sys.argv[1]   
 fout = fin.replace("_def", "")
@@ -11,6 +12,7 @@ with open(fin, encoding="utf-8") as f:
 str = ""
 lp = 0
 for e in a:
+    img = ""
     lp += 1
     str += f"{lp}\n"
     e = e.strip()
@@ -18,15 +20,24 @@ for e in a:
     ok = -1
     idx = -1
     for x in w:
-        if x.startswith("- "):
+        if x.startswith("#"):
+            # komentarz
+            pass
+        elif x.startswith("- "):
             idx += 1
             str += f"{x[2:]}\n"
         elif x.startswith("* "):
             idx += 1
             ok = idx
             str += f"{x[2:]}\n"
+        elif x.startswith("{{"):
+            m = re.match(r"{{\s*img\s+(.+)\s*}}", x)
+            if m:
+                img = "//" + m.group(1)
+            else:
+                print(f"Nieznana fraza: {x} w pytaniu nr {lp}")
         else:
-            str += f"{x}\n"
+            str += f"{x}{img}\n"
     str += chr(ord("a") + ok) + "\n"
 
 with open(fout, "w", encoding="utf-8") as f:
