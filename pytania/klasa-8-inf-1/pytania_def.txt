@@ -5,13 +5,6 @@ Który program jest edytorem tekstu w pakiecie LibreOffice?
 - Base
 - Draw
 ===
-Do czego służy skrót klawiaturowy Ctrl + B w LibreOffice Writer?
-- Do zapisania dokumentu
-* Do pogrubienia tekstu
-- Do wydrukowania dokumentu
-- Do otwarcia dokumentu
-- Do podkreślenia tekstu
-===
 Który skrót klawiaturowy służy do zapisania dokumentu?
 - Ctrl + C
 - Ctrl + V
@@ -21,14 +14,14 @@ Który skrót klawiaturowy służy do zapisania dokumentu?
 ===
 Do czego służy lista numerowana?
 - Do wyróżnienia fragmentów tekstu kolorem
-* Do przedstawienia elementów w określonej kolejności za pomocą numerów
+* Do przedstawienia elementów w określonej kolejności
 - Do tworzenia tabeli z numerami porządkowymi
 - Do zmiany orientacji strony
 - Do wstawiania przypisów z automatyczną numeracją
 ===
 Który symbol jest typowy dla listy nienumerowanej?
-* Numer 1.
-- Kropka lub inny znak wypunktowania
+* Kropka lub inny znak wypunktowania
+- 1.
 - Znak paragrafu
 - Znak równości
 - Strzałka kursora
@@ -44,7 +37,7 @@ Jak zakończyć tworzenie listy numerowanej w Writerze?
 Do czego służy przypis dolny?
 - Do numerowania stron
 * Do umieszczenia dodatkowej informacji na dole strony
-- Do umieszczenia dodatkowej informacji na końcu dokumentu
+- Do umieszczenia dodatkowej informacji na dole (końcu) dokumentu
 - Do tworzenia nagłówka
 - Do wstawiania tabeli
 ===
@@ -90,24 +83,17 @@ Jak nazywa się podstawowy element tabeli znajdujący się na przecięciu wiersz
 - Przypis
 - Nagłówek
 ===
-Co należy zrobić, aby dodać nowy wiersz do tabeli?
-* Użyć odpowiedniej opcji wstawiania wiersza
-- Zmienić czcionkę
-- Wstawić przypis dolny
-- Włączyć tryb pełnoekranowy
-- Zmienić marginesy
-===
 Czym jest nagłówek strony w dokumencie?
-- Tytułem dokumentu napisanym powiększoną i pogrubioną czcionką
-* Tekstem umieszczonym w górnej części strony, często powtarzanym na kolejnych stronach
+- Tytułem dokumentu napisanym powiększoną i pogrubioną czcionką Times New Roman
+* Tekstem umieszczonym w górnej części strony, powtarzanym na kolejnych stronach
 - Ostatnim akapitem dokumentu
 - Tytułem pliku na dysku
-- Pierwszym wierszem tabeli
+- Pierwszym wierszem tabeli napisanym powiększoną i pogrubioną czcionką szeryfową
 ===
 Do czego służy stopka strony?
 * Do wstawiania tekstu na dole strony, np. numeru strony
 - Do wstawiania tekstu na górze strony
-- Do zmiany orientacji strony
+- Do zmiany orientacji strony na poziomy lub pionowy
 - Do tworzenia listy numerowanej
 - Do usuwania marginesów
 ===
@@ -119,9 +105,9 @@ Która opcja pozwala ustawić stronę poziomo zamiast pionowo?
 - Wcięcie akapitu
 ===
 Czym są marginesy strony?
-- Odstępami między literami
+- Odstępami między literami (spacje, tabulacje itp.)
 * Pustymi obszarami wokół obszaru tekstu
-- Odstępami między wierszami
+- Odstępami między wierszami akapitu
 - Kolorami strony
 - Numerami stron
 ===
@@ -136,16 +122,16 @@ Co oznacza formatowanie tekstu?
 Jakie zastosowanie ma licencja Creative Commons?
 - Służy do ochrony komputera przed wirusami
 * Określa warunki, na jakich można korzystać z utworów i je rozpowszechniać
-- Umożliwia odpłatne korzystanie z utworu
+- Umożliwia odpłatne korzystanie z utworu pod warunkiem wcześniejszego uiszczenia opłaty
 - Umożliwia bezpłatne korzystanie z każdego utworu bez ograniczeń
 - Jest formatem zapisu dokumentów
 ===
-Do czego służy wyrównanie tekstu do obu marginesów (justowanie)?
+Do czego służy obustronne wyrównanie tekstu czyli justowanie?
 - Do ustawienia tekstu tylko po lewej stronie
 - Do ustawienia tekstu tylko po prawej stronie
 * Do wyrównania tekstu jednocześnie do lewego i prawego marginesu
 - Do wyśrodkowania tekstu
-- Do obrócenia tekstu
+- Do obrócenia tekstu o 180 stopni
 ===
 Które rozszerzenie jest domyślnym formatem dokumentu LibreOffice Writer?
 - .pdf (PDF)

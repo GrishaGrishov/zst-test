@@ -7,14 +7,6 @@ Base
 Draw
 c
 2
-Do czego służy skrót klawiaturowy Ctrl + B w LibreOffice Writer?
-Do zapisania dokumentu
-Do pogrubienia tekstu
-Do wydrukowania dokumentu
-Do otwarcia dokumentu
-Do podkreślenia tekstu
-b
-3
 Który skrót klawiaturowy służy do zapisania dokumentu?
 Ctrl + C
 Ctrl + V
@@ -22,23 +14,23 @@ Ctrl + S
 Ctrl + X
 Ctrl + P
 c
-4
+3
 Do czego służy lista numerowana?
 Do wyróżnienia fragmentów tekstu kolorem
-Do przedstawienia elementów w określonej kolejności za pomocą numerów
+Do przedstawienia elementów w określonej kolejności
 Do tworzenia tabeli z numerami porządkowymi
 Do zmiany orientacji strony
 Do wstawiania przypisów z automatyczną numeracją
 b
-5
+4
 Który symbol jest typowy dla listy nienumerowanej?
-Numer 1.
 Kropka lub inny znak wypunktowania
+1.
 Znak paragrafu
 Znak równości
 Strzałka kursora
 a
-6
+5
 Jak zakończyć tworzenie listy numerowanej w Writerze?//lista_numerowana.png
 Nacisnąć dwa razy Enter
 Nacisnąć Esc i zamknąć program
@@ -46,15 +38,15 @@ Usunąć cały tekst
 Nacisnąć Ctrl + S
 Zmienić czcionkę
 a
-7
+6
 Do czego służy przypis dolny?
 Do numerowania stron
 Do umieszczenia dodatkowej informacji na dole strony
-Do umieszczenia dodatkowej informacji na końcu dokumentu
+Do umieszczenia dodatkowej informacji na dole (końcu) dokumentu
 Do tworzenia nagłówka
 Do wstawiania tabeli
 b
-8
+7
 Gdzie najczęściej wyświetlany jest przypis dolny?
 Na początku dokumentu
 Na końcu każdego rozdziału
@@ -62,7 +54,7 @@ U dołu strony, na której znajduje się odwołanie
 W nagłówku strony
 W osobnym oknie programu
 c
-9
+8
 Czym różni się przypis końcowy od przypisu dolnego?
 Przypis końcowy znajduje się na końcu dokumentu (lub sekcji)
 Przypis końcowy jest zawsze kolorowy
@@ -70,7 +62,7 @@ Przypis końcowy nie ma numeru
 Przypis końcowy znajduje się w nagłówku
 Przypis końcowy znajduje się na dole bieżącej strony
 a
-10
+9
 Do czego służy podział tekstu na kolumny?
 Do automatycznego tłumaczenia tekstu
 Do przedstawienia tekstu w kilku pionowych częściach strony
@@ -78,7 +70,7 @@ Do zmiany rozmiaru czcionki
 Do numerowania akapitów
 Do wstawiania obrazów
 b
-11
+10
 W którym rodzaju publikacji często stosuje się układ wielokolumnowy?
 W listach prywatnych
 W gazetach i czasopismach
@@ -86,7 +78,7 @@ W formularzach haseł
 W prostych notatkach
 W arkuszach kalkulacyjnych
 b
-12
+11
 Do czego służy tabela w edytorze tekstu?
 Wyłącznie do rysowania
 Do uporządkowania danych w wierszach i kolumnach
@@ -94,7 +86,7 @@ Do zmiany języka dokumentu na język polski
 Do przedstawiania danych w postaci kolejnych punktów
 Do tworzenia przypisów
 b
-13
+12
 Jak nazywa się podstawowy element tabeli znajdujący się na przecięciu wiersza i kolumny?
 Akapit
 Komórka
@@ -102,31 +94,23 @@ Margines
 Przypis
 Nagłówek
 b
-14
-Co należy zrobić, aby dodać nowy wiersz do tabeli?
-Użyć odpowiedniej opcji wstawiania wiersza
-Zmienić czcionkę
-Wstawić przypis dolny
-Włączyć tryb pełnoekranowy
-Zmienić marginesy
-a
-15
+13
 Czym jest nagłówek strony w dokumencie?
-Tytułem dokumentu napisanym powiększoną i pogrubioną czcionką
-Tekstem umieszczonym w górnej części strony, często powtarzanym na kolejnych stronach
+Tytułem dokumentu napisanym powiększoną i pogrubioną czcionką Times New Roman
+Tekstem umieszczonym w górnej części strony, powtarzanym na kolejnych stronach
 Ostatnim akapitem dokumentu
 Tytułem pliku na dysku
-Pierwszym wierszem tabeli
+Pierwszym wierszem tabeli napisanym powiększoną i pogrubioną czcionką szeryfową
 b
-16
+14
 Do czego służy stopka strony?
 Do wstawiania tekstu na dole strony, np. numeru strony
 Do wstawiania tekstu na górze strony
-Do zmiany orientacji strony
+Do zmiany orientacji strony na poziomy lub pionowy
 Do tworzenia listy numerowanej
 Do usuwania marginesów
 a
-17
+15
 Która opcja pozwala ustawić stronę poziomo zamiast pionowo?
 Interlinia
 Orientacja strony
@@ -134,15 +118,15 @@ Wypunktowanie
 Przypis
 Wcięcie akapitu
 b
-18
+16
 Czym są marginesy strony?
-Odstępami między literami
+Odstępami między literami (spacje, tabulacje itp.)
 Pustymi obszarami wokół obszaru tekstu
-Odstępami między wierszami
+Odstępami między wierszami akapitu
 Kolorami strony
 Numerami stron
 b
-19
+17
 Co oznacza formatowanie tekstu?
 Zmianę wyglądu tekstu, np. czcionki, koloru i wyrównania
 Usunięcie dokumentu
@@ -150,23 +134,23 @@ Wysłanie dokumentu pocztą w formacie PDF (Portable Document Format)
 Zmianę nazwy pliku
 Skanowanie dokumentu
 a
-20
+18
 Jakie zastosowanie ma licencja Creative Commons?//cc.png
 Służy do ochrony komputera przed wirusami
 Określa warunki, na jakich można korzystać z utworów i je rozpowszechniać
-Umożliwia odpłatne korzystanie z utworu
+Umożliwia odpłatne korzystanie z utworu pod warunkiem wcześniejszego uiszczenia opłaty
 Umożliwia bezpłatne korzystanie z każdego utworu bez ograniczeń
 Jest formatem zapisu dokumentów
 b
-21
-Do czego służy wyrównanie tekstu do obu marginesów (justowanie)?
+19
+Do czego służy obustronne wyrównanie tekstu czyli justowanie?
 Do ustawienia tekstu tylko po lewej stronie
 Do ustawienia tekstu tylko po prawej stronie
 Do wyrównania tekstu jednocześnie do lewego i prawego marginesu
 Do wyśrodkowania tekstu
-Do obrócenia tekstu
+Do obrócenia tekstu o 180 stopni
 c
-22
+20
 Które rozszerzenie jest domyślnym formatem dokumentu LibreOffice Writer?
 .pdf (PDF)
 .odt (ODF)
@@ -174,7 +158,7 @@ Które rozszerzenie jest domyślnym formatem dokumentu LibreOffice Writer?
 .jpg (JPEG)
 .mp3 (MP3)
 b
-23
+21
 Co umożliwia funkcja Znajdź i zamień?
 Zmianę nazwy programu na wskazaną w specjalnym okienku
 Wyszukiwanie określonego tekstu i zastępowanie go innym
@@ -182,7 +166,7 @@ Tworzenie kopii zapasowej systemu
 Zmianę rozmiaru i orientacji strony 
 Wstawianie tabeli
 b
-24
+22
 Który skrót klawiaturowy służy do kopiowania zaznaczonego tekstu?//klawiatura.png
 Ctrl + X
 Ctrl + Z
@@ -190,7 +174,7 @@ Ctrl + C
 Ctrl + A
 Ctrl + P
 c
-25
+23
 Czym jest plik PDF?//pdf.png 
 Plikiem przeznaczonym wyłącznie do edycji grafiki
 Formatem dokumentu, który pozwala zachować jego układ na różnych urządzeniach
@@ -198,7 +182,7 @@ Programem do pisania tekstu wykorzystujęcym funkcję formatowania tekstu i graf
 Formatem pliku dźwiękowego
 Plikiem arkusza kalkulacyjnego zawierającym wykresy i tabele
 b
-26
+24
 Do czego służy sprawdzanie pisowni w Writerze?
 Do automatycznego tłumaczenia dokumentu na język polski
 Do wykrywania błędów ortograficznych i językowych
@@ -206,7 +190,7 @@ Do zmiany rozmiaru czcionki
 Do liczenia stron
 Do tworzenia tabel
 b
-27
+25
 Co oznacza skrót RAM?
 Pamięć operacyjna komputera
 Procesor komputera (CPU)
@@ -214,7 +198,7 @@ Dysk optyczny (BlueRay lub CD)
 Karta sieciowa Ethernet
 System operacyjny
 a
-28
+26
 Które z poniższych działań jest przykładem tworzenia kopii zapasowej?
 Zapisanie dodatkowej kopii dokumentu na innym nośniku
 Przeniesienie dokumentu do innego folderu na tym samym dysku
